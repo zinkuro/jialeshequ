@@ -147,6 +147,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backgroundViewTap:)];
     [self.backgroundView addGestureRecognizer:tap];
     
+    self.container.menuItemFont = [UIFont systemFontOfSize:self.view.size.width * 17 / 414.0f];
     [self.container.view addSubview:self.backgroundView];
     [self.backgroundView addSubview:self.backgroundImageView];
     [self.backgroundView addSubview:self.avatarView];

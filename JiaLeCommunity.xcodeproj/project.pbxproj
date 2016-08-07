@@ -59,6 +59,18 @@
 		3C26E5E11D2BCF640086E738 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C26E5B91D2BCF640086E738 /* ViewController.m */; };
 		3C26E5E21D2BCF640086E738 /* 图层 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C26E5BA1D2BCF640086E738 /* 图层 11.png */; };
 		3C26E5E81D2C914C0086E738 /* n0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C26E5E71D2C914C0086E738 /* n0.png */; };
+		3C7370DD1D56E516000F0D11 /* JMLabSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370DC1D56E516000F0D11 /* JMLabSearchViewController.m */; };
+		3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370E71D572705000F0D11 /* JMLabListViewController.m */; };
+		3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370EA1D57271D000F0D11 /* JMLabCollectionViewCell.m */; };
+		3C7370ED1D57271D000F0D11 /* JMLabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370EB1D57271D000F0D11 /* JMLabCollectionViewCell.xib */; };
+		3C7370F51D572D42000F0D11 /* 四方@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370EE1D572D42000F0D11 /* 四方@2x.png */; };
+		3C7370F61D572D42000F0D11 /* 搜索.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370EF1D572D42000F0D11 /* 搜索.png */; };
+		3C7370F71D572D42000F0D11 /* 实验室标签.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F01D572D42000F0D11 /* 实验室标签.png */; };
+		3C7370F81D572D42000F0D11 /* 学分标签.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F11D572D42000F0D11 /* 学分标签.png */; };
+		3C7370F91D572D42000F0D11 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F21D572D42000F0D11 /* search.png */; };
+		3C7370FA1D572D42000F0D11 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F31D572D42000F0D11 /* menu.png */; };
+		3C7370FB1D572D42000F0D11 /* heroes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F41D572D42000F0D11 /* heroes.png */; };
+		3C7370FE1D573EC6000F0D11 /* JMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +169,22 @@
 		3C26E5B91D2BCF640086E738 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C26E5BA1D2BCF640086E738 /* 图层 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "图层 11.png"; path = "../图层 11.png"; sourceTree = "<group>"; };
 		3C26E5E71D2C914C0086E738 /* n0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = n0.png; path = ../n0.png; sourceTree = "<group>"; };
+		3C7370DB1D56E516000F0D11 /* JMLabSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabSearchViewController.h; sourceTree = "<group>"; };
+		3C7370DC1D56E516000F0D11 /* JMLabSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLabSearchViewController.m; sourceTree = "<group>"; };
+		3C7370E61D572705000F0D11 /* JMLabListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabListViewController.h; sourceTree = "<group>"; };
+		3C7370E71D572705000F0D11 /* JMLabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLabListViewController.m; sourceTree = "<group>"; };
+		3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabCollectionViewCell.h; sourceTree = "<group>"; };
+		3C7370EA1D57271D000F0D11 /* JMLabCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLabCollectionViewCell.m; sourceTree = "<group>"; };
+		3C7370EB1D57271D000F0D11 /* JMLabCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMLabCollectionViewCell.xib; sourceTree = "<group>"; };
+		3C7370EE1D572D42000F0D11 /* 四方@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "四方@2x.png"; sourceTree = "<group>"; };
+		3C7370EF1D572D42000F0D11 /* 搜索.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索.png"; sourceTree = "<group>"; };
+		3C7370F01D572D42000F0D11 /* 实验室标签.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "实验室标签.png"; sourceTree = "<group>"; };
+		3C7370F11D572D42000F0D11 /* 学分标签.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学分标签.png"; sourceTree = "<group>"; };
+		3C7370F21D572D42000F0D11 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		3C7370F31D572D42000F0D11 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		3C7370F41D572D42000F0D11 /* heroes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroes.png; sourceTree = "<group>"; };
+		3C7370FC1D573EC6000F0D11 /* JMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSearchViewController.h; sourceTree = "<group>"; };
+		3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSearchViewController.m; sourceTree = "<group>"; };
 		674EF6B5A44DBEB10D31B12C /* Pods-JiaLeCommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaLeCommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiaLeCommunity/Pods-JiaLeCommunity.debug.xcconfig"; sourceTree = "<group>"; };
 		80599D74EB852583F65432F7 /* Pods-JiaLeCommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaLeCommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-JiaLeCommunity/Pods-JiaLeCommunity.release.xcconfig"; sourceTree = "<group>"; };
 		8C18B405BD66B3D63EA85FD1 /* libPods-JiaLeCommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaLeCommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -316,6 +344,13 @@
 		3C26E5881D2BCF640086E738 /* icon */ = {
 			isa = PBXGroup;
 			children = (
+				3C7370EE1D572D42000F0D11 /* 四方@2x.png */,
+				3C7370EF1D572D42000F0D11 /* 搜索.png */,
+				3C7370F01D572D42000F0D11 /* 实验室标签.png */,
+				3C7370F11D572D42000F0D11 /* 学分标签.png */,
+				3C7370F21D572D42000F0D11 /* search.png */,
+				3C7370F31D572D42000F0D11 /* menu.png */,
+				3C7370F41D572D42000F0D11 /* heroes.png */,
 				3C1A64411D2E7E6200ACAB49 /* write.png */,
 				3C1A643C1D2E3A4F00ACAB49 /* 199.png */,
 				3C26E5851D2BCF640086E738 /* h0.png */,
@@ -358,6 +393,15 @@
 			children = (
 				3C26E59D1D2BCF640086E738 /* JMLabViewController.h */,
 				3C26E59E1D2BCF640086E738 /* JMLabViewController.m */,
+				3C7370FC1D573EC6000F0D11 /* JMSearchViewController.h */,
+				3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */,
+				3C7370E61D572705000F0D11 /* JMLabListViewController.h */,
+				3C7370E71D572705000F0D11 /* JMLabListViewController.m */,
+				3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */,
+				3C7370EA1D57271D000F0D11 /* JMLabCollectionViewCell.m */,
+				3C7370EB1D57271D000F0D11 /* JMLabCollectionViewCell.xib */,
+				3C7370DB1D56E516000F0D11 /* JMLabSearchViewController.h */,
+				3C7370DC1D56E516000F0D11 /* JMLabSearchViewController.m */,
 			);
 			path = "Lab-实验室";
 			sourceTree = "<group>";
@@ -490,7 +534,7 @@
 				TargetAttributes = {
 					3C26E53E1D2BCF2F0086E738 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = MZ35PZ7DS9;
+						DevelopmentTeam = PSJVJ39X3Q;
 					};
 					3C26E5571D2BCF2F0086E738 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -532,16 +576,22 @@
 				3C26E5CC1D2BCF640086E738 /* message@2x.png in Resources */,
 				3C26E5C91D2BCF640086E738 /* i3.png in Resources */,
 				3C26E5C61D2BCF640086E738 /* i0.png in Resources */,
+				3C7370F91D572D42000F0D11 /* search.png in Resources */,
 				3C26E5521D2BCF2F0086E738 /* LaunchScreen.storyboard in Resources */,
+				3C7370F61D572D42000F0D11 /* 搜索.png in Resources */,
 				3C1A64421D2E7E6200ACAB49 /* write.png in Resources */,
 				3C26E5CD1D2BCF640086E738 /* mine@2x.png in Resources */,
 				3C26E5D21D2BCF640086E738 /* shape51.png in Resources */,
 				3C1A648D1D2FC6BB00ACAB49 /* JMMineCell.xib in Resources */,
 				3C26E5E81D2C914C0086E738 /* n0.png in Resources */,
+				3C7370FA1D572D42000F0D11 /* menu.png in Resources */,
 				3C26E5BF1D2BCF640086E738 /* Main.storyboard in Resources */,
 				3C26E5BE1D2BCF640086E738 /* LaunchScreen.storyboard in Resources */,
 				3C26E5D11D2BCF640086E738 /* shape3-c.png in Resources */,
+				3C7370FB1D572D42000F0D11 /* heroes.png in Resources */,
+				3C7370F51D572D42000F0D11 /* 四方@2x.png in Resources */,
 				3C26E5D01D2BCF640086E738 /* shape20-c.png in Resources */,
+				3C7370F71D572D42000F0D11 /* 实验室标签.png in Resources */,
 				3C26E5C41D2BCF640086E738 /* h2.png in Resources */,
 				3C26E5C51D2BCF640086E738 /* chat@2x.png in Resources */,
 				3C26E5CB1D2BCF640086E738 /* menu@2x.png in Resources */,
@@ -554,7 +604,9 @@
 				3C26E54D1D2BCF2F0086E738 /* Main.storyboard in Resources */,
 				3C26E5C31D2BCF640086E738 /* h1.png in Resources */,
 				3C26E5CE1D2BCF640086E738 /* notice@2x.png in Resources */,
+				3C7370F81D572D42000F0D11 /* 学分标签.png in Resources */,
 				3C1A643D1D2E3A4F00ACAB49 /* 199.png in Resources */,
+				3C7370ED1D57271D000F0D11 /* JMLabCollectionViewCell.xib in Resources */,
 				3C26E5D91D2BCF640086E738 /* JMNoticeCell.xib in Resources */,
 				3C26E5C71D2BCF640086E738 /* i1.png in Resources */,
 			);
@@ -630,7 +682,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C26E5D31D2BCF640086E738 /* JMContainerViewController.m in Sources */,
+				3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */,
 				3C26E5D61D2BCF640086E738 /* JMMessageViewController.m in Sources */,
+				3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */,
 				3C26E5DB1D2BCF640086E738 /* JMNoticeHeaderViewController.m in Sources */,
 				3C26E5D81D2BCF640086E738 /* JMNoticeCell.m in Sources */,
 				3C26E5DD1D2BCF640086E738 /* AppDelegate.m in Sources */,
@@ -638,6 +692,7 @@
 				3C26E5E01D2BCF640086E738 /* UIView+JMExtension.m in Sources */,
 				3C26E5C01D2BCF640086E738 /* JMButton.m in Sources */,
 				3C1A64961D2FD6DE00ACAB49 /* JMMineCellModel.m in Sources */,
+				3C7370DD1D56E516000F0D11 /* JMLabSearchViewController.m in Sources */,
 				3C26E5BC1D2BCF640086E738 /* JMBasicViewController.m in Sources */,
 				3C26E5DA1D2BCF640086E738 /* JMNoticeCellModel.m in Sources */,
 				3C26E5DF1D2BCF640086E738 /* UIColor+JMColor.m in Sources */,
@@ -649,6 +704,7 @@
 				3C26E5BD1D2BCF640086E738 /* JMTabBarController.m in Sources */,
 				3C26E5BB1D2BCF640086E738 /* JMChatViewController.m in Sources */,
 				3C26E5D71D2BCF640086E738 /* JMMineViewController.m in Sources */,
+				3C7370FE1D573EC6000F0D11 /* JMSearchViewController.m in Sources */,
 				3C1A648C1D2FC6BB00ACAB49 /* JMMineCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

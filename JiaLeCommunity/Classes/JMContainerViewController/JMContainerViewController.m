@@ -45,6 +45,8 @@ static const CGFloat JM_SCROLL_HEIGHT = 45;
         _contentScrollView.delegate = self;
         _contentScrollView.showsHorizontalScrollIndicator = NO;
         _contentScrollView.scrollsToTop = NO;
+        _contentScrollView.bounces = NO;
+        _contentScrollView.contentSize = CGSizeMake(_contentScrollView.frame.size.width * self.childControllers.count, _contentScrollView.frame.size.height);
         //_contentScrollView.backgroundColor = [UIColor cyanColor];
     }
     return _contentScrollView;
@@ -78,6 +80,8 @@ static const CGFloat JM_SCROLL_HEIGHT = 45;
 }
 
 - (void)creatUI {
+    UIView *viewCover = [[UIView alloc]init];
+    [self.view addSubview:viewCover];
 
     [self.view addSubview:self.contentScrollView];
     
