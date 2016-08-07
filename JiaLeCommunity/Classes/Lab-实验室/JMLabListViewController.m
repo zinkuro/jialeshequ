@@ -19,7 +19,8 @@
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-        _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.size.width, self.view.size.height - 64 - 45 - 49) collectionViewLayout:flowLayout];
+        ;
         _collectionView.backgroundColor = [UIColor colorWithR:242 G:242 B:242];
     }
     return _collectionView;
