@@ -41,6 +41,15 @@
     
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"%.2f",self.tableView.contentOffset.y);
+    if (self.tableView.contentOffset.y > 50) {
+        [self.delegate hideHeaderView];
+    }else if (self.tableView.contentOffset.y < -50) {
+        [self.delegate showHeaderView];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

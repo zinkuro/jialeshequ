@@ -13,7 +13,7 @@
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 #define SCALE (WIDTH / 414)
 
-@interface JMMineViewController () {
+@interface JMMineViewController ()<JMHeaderViewChangeDelegate> {
     BOOL _isHide;
 }
 
@@ -34,7 +34,7 @@
     if (!_statusTableViewController) {
         _statusTableViewController = [[JMMineTableViewController alloc]init];
         _statusTableViewController.title = @"动态";
-        
+        _statusTableViewController.delegate = self;
     }
     return _statusTableViewController;
 }
@@ -144,8 +144,8 @@
     [self.editButton setAttributedTitle:attrF forState:UIControlStateNormal];
     [self.editButton addTarget:self action:@selector(editButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backgroundViewTap:)];
-    [self.backgroundView addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backgroundViewTap:)];
+//    [self.backgroundView addGestureRecognizer:tap];
     
     self.container.menuItemFont = [UIFont systemFontOfSize:self.view.size.width * 17 / 414.0f];
     [self.container.view addSubview:self.backgroundView];
@@ -183,22 +183,37 @@
     NSLog(@"editClicked");
 }
 
-- (void)backgroundViewTap:(UITapGestureRecognizer *)tap {
-    NSLog(@"ViewTaped");
+//- (void)backgroundViewTap:(UITapGestureRecognizer *)tap {
+//    NSLog(@"ViewTaped");
+//    __weak typeof(self) weakself = self;
+//    [UIView animateWithDuration:0.5 animations:^{
+//        if (_isHide) {
+//            [weakself.container.view setY:0];
+//            weakself.container.contentScrollView.height = weakself.view.height - weakself.backgroundView.height - 50 - 45;
+//        }else {
+//            [weakself.container.view setY:- weakself.backgroundView.height + 16];
+//            weakself.container.contentScrollView.height = weakself.view.height - 16 - 50 - 45;
+//        }
+//        _isHide = !_isHide;
+//        
+//    }];
+//}
+
+- (void)showHeaderView {
     __weak typeof(self) weakself = self;
     [UIView animateWithDuration:0.5 animations:^{
-        if (_isHide) {
-            [weakself.container.view setY:0];
-            weakself.container.contentScrollView.height = weakself.view.height - weakself.backgroundView.height - 50 - 45;
-        }else {
-            [weakself.container.view setY:- weakself.backgroundView.height + 16];
-            weakself.container.contentScrollView.height = weakself.view.height - 16 - 50 - 45;
-        }
-        _isHide = !_isHide;
-        
+        [weakself.container.view setY:0];
+        weakself.container.contentScrollView.height = weakself.view.height - weakself.backgroundView.height - 50 - 45;
     }];
 }
 
+- (void)hideHeaderView {
+    __weak typeof(self) weakself = self;
+    [UIView animateWithDuration:0.5 animations:^{
+        [weakself.container.view setY:- weakself.backgroundView.height];
+        weakself.container.contentScrollView.height = weakself.view.height - 50 - 45;
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

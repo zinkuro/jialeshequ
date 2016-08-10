@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JMHeaderViewChangeDelegate <NSObject>
+
+- (void)hideHeaderView;
+- (void)showHeaderView;
+
+@end
+
 @interface JMMineTableViewController : UITableViewController
+
+@property (nonatomic,weak) id<JMHeaderViewChangeDelegate> delegate;
 
 @end
