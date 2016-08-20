@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AFHTTPSessionManager.h>
 @interface JMBasicViewController : UIViewController
+
+@property (strong,nonatomic) AFHTTPSessionManager *manager;
+
+@property (nonatomic,strong) NSString *token;
 
 - (void)creatUI;
 

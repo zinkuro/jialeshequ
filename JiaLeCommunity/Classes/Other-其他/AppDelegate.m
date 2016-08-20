@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "JMTabBarController.h"
+#import "JMLoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +21,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    self.window.rootViewController = [[JMTabBarController alloc]init];
+    self.window.rootViewController = [[JMLoginViewController alloc]init];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -68,6 +68,7 @@
 		3C7370FA1D572D42000F0D11 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F31D572D42000F0D11 /* menu.png */; };
 		3C7370FB1D572D42000F0D11 /* heroes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F41D572D42000F0D11 /* heroes.png */; };
 		3C7370FE1D573EC6000F0D11 /* JMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */; };
+		3C73720C1D67FEB8000F0D11 /* JMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C73720B1D67FEB8000F0D11 /* JMLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,8 @@
 		3C7370F41D572D42000F0D11 /* heroes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heroes.png; sourceTree = "<group>"; };
 		3C7370FC1D573EC6000F0D11 /* JMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSearchViewController.h; sourceTree = "<group>"; };
 		3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSearchViewController.m; sourceTree = "<group>"; };
+		3C73720A1D67FEB8000F0D11 /* JMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLoginViewController.h; sourceTree = "<group>"; };
+		3C73720B1D67FEB8000F0D11 /* JMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLoginViewController.m; sourceTree = "<group>"; };
 		674EF6B5A44DBEB10D31B12C /* Pods-JiaLeCommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaLeCommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiaLeCommunity/Pods-JiaLeCommunity.debug.xcconfig"; sourceTree = "<group>"; };
 		80599D74EB852583F65432F7 /* Pods-JiaLeCommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaLeCommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-JiaLeCommunity/Pods-JiaLeCommunity.release.xcconfig"; sourceTree = "<group>"; };
 		8C18B405BD66B3D63EA85FD1 /* libPods-JiaLeCommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaLeCommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +317,8 @@
 		3C26E5791D2BCF640086E738 /* Common-公用 */ = {
 			isa = PBXGroup;
 			children = (
+				3C73720A1D67FEB8000F0D11 /* JMLoginViewController.h */,
+				3C73720B1D67FEB8000F0D11 /* JMLoginViewController.m */,
 				3C26E57C1D2BCF640086E738 /* JMTabBarController.h */,
 				3C26E57D1D2BCF640086E738 /* JMTabBarController.m */,
 				3C26E57A1D2BCF640086E738 /* JMBasicViewController.h */,
@@ -682,6 +687,7 @@
 				3C26E5BC1D2BCF640086E738 /* JMBasicViewController.m in Sources */,
 				3C26E5DA1D2BCF640086E738 /* JMNoticeCellModel.m in Sources */,
 				3C26E5DF1D2BCF640086E738 /* UIColor+JMColor.m in Sources */,
+				3C73720C1D67FEB8000F0D11 /* JMLoginViewController.m in Sources */,
 				3C26E5D41D2BCF640086E738 /* JMMenuScrollView.m in Sources */,
 				3C26E5DC1D2BCF640086E738 /* JMNoticeViewController.m in Sources */,
 				3C26E5D51D2BCF640086E738 /* JMLabViewController.m in Sources */,

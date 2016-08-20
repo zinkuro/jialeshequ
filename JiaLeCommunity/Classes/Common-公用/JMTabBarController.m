@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [self creatChildControllerWithVc:[[JMNoticeViewController alloc]init] Title:@"社区公告" image:@"notice" selectedImage:@""];
     
     [self creatChildControllerWithVc:[[JMMessageViewController alloc]init] Title:@"动态" image:@"message" selectedImage:@""];

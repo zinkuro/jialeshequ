@@ -7,17 +7,31 @@
 //
 
 #import "JMBasicViewController.h"
-
+#import "AppDelegate.h"
 @interface JMBasicViewController ()
+
 
 @end
 
 @implementation JMBasicViewController
 
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+        _manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        _manager.responseSerializer.acceptableContentTypes = [_manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    }
+    return _manager;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.token = delegate.token;
+    NSLog(@"%@",self.token);
     [self creatUI];
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithR:24 G:154 B:202]];
