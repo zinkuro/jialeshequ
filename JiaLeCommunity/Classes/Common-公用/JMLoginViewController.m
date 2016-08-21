@@ -33,7 +33,7 @@
                   Dict:(NSDictionary *)dict {
     
     [self.manager POST:url parameters:(NSDictionary *)dict progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"downloading");
+        NSLog(@"login");
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"%@",responseObject);
 //        //        NSLog(@"%@",responseObject[@"msg"]);

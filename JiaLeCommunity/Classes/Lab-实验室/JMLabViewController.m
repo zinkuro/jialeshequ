@@ -47,11 +47,35 @@
     [super viewDidLoad];
     self.container.menuItemFont = [UIFont systemFontOfSize:self.view.size.width * 15 / 414.0f];
     self.navigationItem.titleView = self.searchBar;
+    NSLog(@"%@",self.token);
+    NSDictionary *dict = @{@"school":@"16",@"token":self.token};
+    [self.manager GET:JIALE_TASK_URL parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"gettingTask");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"这是全部数据%@",jsonStr);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error:%@",error);
+    }];
 //    self.container.contentScrollView.canCancelContentTouches = NO;
     [self.view addSubview:self.container.view];
     
 
     // Do any additional setup after loading the view.
+}
+
+- (void)getSchoolList {
+    [self.manager GET:JIALE_SCHOOL_URL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"gettingTask");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"这是全部数据%@",jsonStr);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error:%@",error);
+    }];
+
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {

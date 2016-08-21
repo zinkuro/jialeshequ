@@ -29,7 +29,6 @@
     // Do any additional setup after loading the view.
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     self.token = delegate.token;
-    NSLog(@"%@",self.token);
     [self creatUI];
     
 }

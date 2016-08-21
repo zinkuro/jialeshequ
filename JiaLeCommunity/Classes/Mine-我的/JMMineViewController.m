@@ -112,6 +112,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //value需要等待登录界面的逻辑
+    NSDictionary *dict = @{@"type":@"sid",@"value":@"5120140223",@"token":self.token};
+    [self.manager GET:JIALE_USER_URL parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"userGetting");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"errorMsg:%@",error);
+    }];
 //    NSLog(@"%.2f",WIDTH);
     // Do any additional setup after loading the view.
 //    table.view.frame = CGRectMake(0, 0, WIDTH, self.view.height - self.backgroundView.height);
@@ -124,6 +133,7 @@
 
 - (void)creatUI {
     [super creatUI];
+    
     _isHide = NO;
     self.backgroundImageView.image = [UIImage imageNamed:@"199"];
     [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://i0.hdslb.com/bfs/face/2bc3fdc36fe82aa26a85ff8187d903d3e5987c35.jpg"] placeholderImage:[UIImage imageNamed:@""]];
