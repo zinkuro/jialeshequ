@@ -21,6 +21,7 @@
 
 @implementation JMLabViewController
 
+
 - (UISearchBar *)searchBar {
     if (!_searchBar) {
         _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -45,6 +46,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = nil;
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(searchClick)];
+    rightButton.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
     self.container.menuItemFont = [UIFont systemFontOfSize:self.view.size.width * 15 / 414.0f];
     self.navigationItem.titleView = self.searchBar;
     NSLog(@"%@",self.token);
@@ -65,24 +72,20 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)getSchoolList {
-    [self.manager GET:JIALE_SCHOOL_URL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"gettingTask");
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        NSLog(@"这是全部数据%@",jsonStr);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error:%@",error);
-    }];
-
+- (void)searchClick {
+    [self jumpToSearchViewController];
 }
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    NSLog(@"begin");
+    [self jumpToSearchViewController];
+}
+
+- (void)jumpToSearchViewController {
     
     JMSearchViewController *searchVC = [[JMSearchViewController alloc]init];
+
     [self.navigationController pushViewController:searchVC animated:NO];
+
 }
 
 - (void)creatUI {

@@ -10,6 +10,7 @@
 #import "JMMineTableViewController.h"
 #import "JMContainerViewController.h"
 #import "JMMineTableViewController.h"
+#import "JMUserModel.h"
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 #define SCALE (WIDTH / 414)
 
@@ -25,6 +26,8 @@
 
 @property (nonatomic,strong) UIViewController *viewController1;
 @property (nonatomic,strong) UIViewController *viewController2;
+
+@property (nonatomic,strong) JMUserModel *userModel;
 
 @end
 
@@ -117,7 +120,21 @@
     [self.manager GET:JIALE_USER_URL parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
         NSLog(@"userGetting");
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
+        NSDictionary *dataDict = responseObject[@"data"][0];
+//        NSLog(@"%@",responseObject[@"dict"]);
+        
+        _userModel = [[JMUserModel alloc]initWithDict:dataDict];
+        NSLog(@"%@",_userModel);
+        NSLog(@"%@",self.userModel);
+        
+        self.backgroundImageView.image = [UIImage imageNamed:@"199"];
+        [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://i0.hdslb.com/bfs/face/2bc3fdc36fe82aa26a85ff8187d903d3e5987c35.jpg"] placeholderImage:[UIImage imageNamed:@""]];
+        self.nameLabel.text = self.userModel.name;
+        self.signLabel.text = self.userModel.desc;
+//        NSData *jasonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+//        NSString *jasonStr = [[NSString alloc]initWithData:jasonData encoding:NSUTF8StringEncoding];
+//        NSLog(@"%@",jasonStr);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"errorMsg:%@",error);
     }];
@@ -135,10 +152,7 @@
     [super creatUI];
     
     _isHide = NO;
-    self.backgroundImageView.image = [UIImage imageNamed:@"199"];
-    [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://i0.hdslb.com/bfs/face/2bc3fdc36fe82aa26a85ff8187d903d3e5987c35.jpg"] placeholderImage:[UIImage imageNamed:@""]];
-    self.nameLabel.text = @"嘿嘿";
-    self.signLabel.text = @"这个童鞋很懒,什么都没有留下...换行测试换行测试换行测试";
+    
     
     NSMutableAttributedString *attri = [[NSMutableAttributedString alloc]initWithString:@" 编辑"];
     [attri addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, 3)];

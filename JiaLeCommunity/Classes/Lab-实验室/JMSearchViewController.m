@@ -7,14 +7,22 @@
 //
 
 #import "JMSearchViewController.h"
-
+#import "JMSchoolModel.h"
 @interface JMSearchViewController () <UISearchBarDelegate>
 
 @property (nonatomic,strong) UISearchBar *searchBar;
+@property (nonatomic,strong) NSMutableArray *dataArray;
 
 @end
 
 @implementation JMSearchViewController
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 - (UISearchBar *)searchBar {
     if (!_searchBar) {
@@ -28,8 +36,90 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self getSchoolList];
+    
+    [self creatUI];
+}
 
+- (void)creatSchoolButtons {
+    
+    int count = 0;
+    float buttonWidth = 0;
+    
+    for (int i = 0; i < self.dataArray.count; i++) {
+        JMSchoolModel *model = self.dataArray[i];
+        NSString *schoolName = model.name;
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setBackgroundColor:[UIColor colorWithR:242 G:242 B:242]];
+        
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+        
+        button.titleLabel.font = [UIFont systemFontOfSize:14];
+        [button setTitle:schoolName forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(schoolClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        button.layer.masksToBounds = YES;
+        button.layer.cornerRadius = 5;
+        
+        NSDictionary *fontDict = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:13] forKey:NSFontAttributeName];
+        CGSize buttonSize = [schoolName sizeWithAttributes:fontDict];
+        
+        button.width = buttonSize.width + 15;
+        button.height = buttonSize.height + 12;
+        
+        if (i == 0) {
+            button.x = 20;
+            buttonWidth += CGRectGetMaxX(button.frame);
+        }else {
+            buttonWidth += CGRectGetMaxX(button.frame) + 20;
+            if (buttonWidth > self.view.width - 20) {
+                count ++;
+                button.x = 20;
+                buttonWidth = CGRectGetMaxX(button.frame);
+            }else {
+                button.x += buttonWidth - button.width;
+            }
+        }
+        button.y += count * (button.height + 10) + 10;
+        [self.view addSubview:button];
+        button.tag = 1000 + i;
+    }
+}
+
+- (void)schoolClicked:(UIButton *)button {
+    JMSchoolModel *schoolNameTest = self.dataArray[button.tag - 1000];
+    NSLog(@"%@",schoolNameTest.name);
+    
+}
+
+- (void)getSchoolList {
+    [self.manager GET:JIALE_SCHOOL_URL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"gettingTask");
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+//        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//        NSLog(@"这是全部数据%@",jsonStr);
+        
+        NSArray *responseData = responseObject[@"data"];
+        NSArray *schoolArray = [NSArray yy_modelArrayWithClass:[JMSchoolModel class] json:responseData];
+        NSLog(@"%@",schoolArray);
+        
+        [self.dataArray addObjectsFromArray:schoolArray];
+        
+        [self creatSchoolButtons];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error:%@",error);
+    }];
+    
+}
+
+- (void)creatUI {
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = nil;
     // Do any additional setup after loading the view.
     self.navigationItem.titleView = self.searchBar;
     [self.searchBar becomeFirstResponder];

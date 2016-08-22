@@ -16,6 +16,7 @@
 #import <UIImageView+AFNetworking.h>
 #import <AFHTTPSessionManager.h>
 #import <Masonry.h>
+#import <YYModel.h>
 
 #define JIALE_LOGIN_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_login"
 #define JIALE_COMMENT_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_comment"

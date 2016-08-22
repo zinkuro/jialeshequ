@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JMSearchViewController : UIViewController
+@interface JMSearchViewController : JMBasicViewController
 
 @end

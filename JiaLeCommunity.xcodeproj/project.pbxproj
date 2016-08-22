@@ -57,6 +57,8 @@
 		3C26E5E11D2BCF640086E738 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C26E5B91D2BCF640086E738 /* ViewController.m */; };
 		3C26E5E21D2BCF640086E738 /* 图层 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C26E5BA1D2BCF640086E738 /* 图层 11.png */; };
 		3C26E5E81D2C914C0086E738 /* n0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C26E5E71D2C914C0086E738 /* n0.png */; };
+		3C4B134E1D6AA24D00628BA5 /* JMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B134D1D6AA24D00628BA5 /* JMUserModel.m */; };
+		3C4B13511D6AF1FC00628BA5 /* JMSchoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B13501D6AF1FC00628BA5 /* JMSchoolModel.m */; };
 		3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370E71D572705000F0D11 /* JMLabListViewController.m */; };
 		3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370EA1D57271D000F0D11 /* JMLabCollectionViewCell.m */; };
 		3C7370ED1D57271D000F0D11 /* JMLabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370EB1D57271D000F0D11 /* JMLabCollectionViewCell.xib */; };
@@ -165,6 +167,10 @@
 		3C26E5B91D2BCF640086E738 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C26E5BA1D2BCF640086E738 /* 图层 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "图层 11.png"; path = "../图层 11.png"; sourceTree = "<group>"; };
 		3C26E5E71D2C914C0086E738 /* n0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = n0.png; path = ../n0.png; sourceTree = "<group>"; };
+		3C4B134C1D6AA24D00628BA5 /* JMUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMUserModel.h; sourceTree = "<group>"; };
+		3C4B134D1D6AA24D00628BA5 /* JMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUserModel.m; sourceTree = "<group>"; };
+		3C4B134F1D6AF1FC00628BA5 /* JMSchoolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSchoolModel.h; sourceTree = "<group>"; };
+		3C4B13501D6AF1FC00628BA5 /* JMSchoolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSchoolModel.m; sourceTree = "<group>"; };
 		3C7370E61D572705000F0D11 /* JMLabListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabListViewController.h; sourceTree = "<group>"; };
 		3C7370E71D572705000F0D11 /* JMLabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLabListViewController.m; sourceTree = "<group>"; };
 		3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabCollectionViewCell.h; sourceTree = "<group>"; };
@@ -391,6 +397,8 @@
 				3C26E59E1D2BCF640086E738 /* JMLabViewController.m */,
 				3C7370FC1D573EC6000F0D11 /* JMSearchViewController.h */,
 				3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */,
+				3C4B134F1D6AF1FC00628BA5 /* JMSchoolModel.h */,
+				3C4B13501D6AF1FC00628BA5 /* JMSchoolModel.m */,
 				3C7370E61D572705000F0D11 /* JMLabListViewController.h */,
 				3C7370E71D572705000F0D11 /* JMLabListViewController.m */,
 				3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */,
@@ -414,6 +422,8 @@
 			children = (
 				3C26E5A31D2BCF640086E738 /* JMMineViewController.h */,
 				3C26E5A41D2BCF640086E738 /* JMMineViewController.m */,
+				3C4B134C1D6AA24D00628BA5 /* JMUserModel.h */,
+				3C4B134D1D6AA24D00628BA5 /* JMUserModel.m */,
 				3C1A648E1D2FC9AB00ACAB49 /* JMMineTableViewController.h */,
 				3C1A648F1D2FC9AB00ACAB49 /* JMMineTableViewController.m */,
 				3C1A64941D2FD6DE00ACAB49 /* JMMineCellModel.h */,
@@ -674,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C26E5D31D2BCF640086E738 /* JMContainerViewController.m in Sources */,
+				3C4B134E1D6AA24D00628BA5 /* JMUserModel.m in Sources */,
 				3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */,
 				3C26E5D61D2BCF640086E738 /* JMMessageViewController.m in Sources */,
 				3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */,
@@ -696,6 +707,7 @@
 				3C26E5BD1D2BCF640086E738 /* JMTabBarController.m in Sources */,
 				3C26E5BB1D2BCF640086E738 /* JMChatViewController.m in Sources */,
 				3C26E5D71D2BCF640086E738 /* JMMineViewController.m in Sources */,
+				3C4B13511D6AF1FC00628BA5 /* JMSchoolModel.m in Sources */,
 				3C7370FE1D573EC6000F0D11 /* JMSearchViewController.m in Sources */,
 				3C1A648C1D2FC6BB00ACAB49 /* JMMineCell.m in Sources */,
 			);
