@@ -8,6 +8,9 @@
 
 #import "JMSearchViewController.h"
 #import "JMSchoolModel.h"
+#import "JMLabListViewController.h"
+#import "JMContainerViewController.h"
+#import "JMSearchResultViewController.h"
 @interface JMSearchViewController () <UISearchBarDelegate>
 
 @property (nonatomic,strong) UISearchBar *searchBar;
@@ -92,6 +95,9 @@
 - (void)schoolClicked:(UIButton *)button {
     JMSchoolModel *schoolNameTest = self.dataArray[button.tag - 1000];
     NSLog(@"%@",schoolNameTest.name);
+    JMSearchResultViewController *resultVC = [[JMSearchResultViewController alloc]init];
+    resultVC.searchKey = button.titleLabel.text;
+    [self.navigationController pushViewController:resultVC animated:YES];
     
 }
 
@@ -130,7 +136,7 @@
 }
 
 - (void)cancelClick {
-    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

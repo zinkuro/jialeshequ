@@ -10,4 +10,6 @@
 
 @interface JMLabListViewController : UIViewController
 
+@property (nonatomic,strong) NSString *token;
+
 @end

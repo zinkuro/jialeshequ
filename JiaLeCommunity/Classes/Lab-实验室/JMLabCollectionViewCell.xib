@@ -31,9 +31,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2学分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-Bw-tmb">
-                        <rect key="frame" x="125" y="135" width="25" height="8"/>
+                        <rect key="frame" x="110" y="135" width="40" height="8"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="25" id="eIq-fD-pLu"/>
+                            <constraint firstAttribute="width" constant="40" id="eIq-fD-pLu"/>
                             <constraint firstAttribute="height" constant="8" id="eaU-0z-Dxp"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="学分标签.png" translatesAutoresizingMaskIntoConstraints="NO" id="sJG-qn-GeM">
-                        <rect key="frame" x="112" y="135" width="8" height="8"/>
+                        <rect key="frame" x="97" y="135" width="8" height="8"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="8" id="5vh-16-ftC"/>
                             <constraint firstAttribute="width" constant="8" id="Vol-3o-BUO"/>
@@ -84,6 +84,8 @@
             <size key="customSize" width="158" height="151"/>
             <connections>
                 <outlet property="labNameLabel" destination="KZq-fC-xgj" id="zED-2f-fl1"/>
+                <outlet property="scoreLabel" destination="xIa-Bw-tmb" id="5Tl-Lr-HFl"/>
+                <outlet property="typeLabel" destination="5mw-sH-qHt" id="QdJ-yt-mxM"/>
             </connections>
             <point key="canvasLocation" x="464" y="216.5"/>
         </collectionViewCell>

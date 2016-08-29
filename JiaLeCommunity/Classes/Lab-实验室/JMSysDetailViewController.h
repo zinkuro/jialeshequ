@@ -1,14 +1,14 @@
 //
-//  JMLabCollectionViewCell.h
-//  searchBarTest
+//  JMSysDetailViewController.h
+//  JiaLeCommunity
 //
-//  Created by Jin on 16/8/4.
+//  Created by Jin on 16/8/29.
 //  Copyright © 2016年 Jin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "JMSysModel.h"
-@interface JMLabCollectionViewCell : UICollectionViewCell
+@interface JMSysDetailViewController : UIViewController
 
 @property (nonatomic,strong) JMSysModel *model;
 

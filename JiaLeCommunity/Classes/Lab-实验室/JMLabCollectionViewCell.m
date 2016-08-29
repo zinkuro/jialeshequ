@@ -7,10 +7,14 @@
 //h
 
 #import "JMLabCollectionViewCell.h"
-
+#import "JMSysModel.h"
 @interface JMLabCollectionViewCell()
 
 @property (weak, nonatomic) IBOutlet UILabel *labNameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
 
@@ -18,9 +22,18 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    NSLog(@"labelShouldChangeSize");
     self.labNameLabel.font = [UIFont systemFontOfSize:[[UIScreen mainScreen] bounds].size.width * 14 / 414.0];
+    
     // Initialization code
+}
+
+- (void)setModel:(JMSysModel *)model {
+//    [self.coverImageView setImageWithURL:[NSURL URLWithString:model.imgs[0]] placeholderImage:[UIImage imageNamed:@""]];
+//    self.model = model;
+    
+    self.labNameLabel.text = model.title;
+    self.typeLabel.text = model.group_name;
+    self.scoreLabel.text = [NSString stringWithFormat:@"%@学分",model.credit];
 }
 
 @end

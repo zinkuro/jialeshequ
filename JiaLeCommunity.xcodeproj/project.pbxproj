@@ -71,6 +71,18 @@
 		3C7370FB1D572D42000F0D11 /* heroes.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370F41D572D42000F0D11 /* heroes.png */; };
 		3C7370FE1D573EC6000F0D11 /* JMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */; };
 		3C73720C1D67FEB8000F0D11 /* JMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C73720B1D67FEB8000F0D11 /* JMLoginViewController.m */; };
+		3CE671911D6EA16E0068D972 /* JMSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE671901D6EA16E0068D972 /* JMSearchResultViewController.m */; };
+		3CE6719A1D71CB340068D972 /* JMSysModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE671991D71CB340068D972 /* JMSysModel.m */; };
+		3CE6719D1D7424150068D972 /* JMSysDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6719C1D7424150068D972 /* JMSysDetailViewController.m */; };
+		3CE6719F1D7427D60068D972 /* nikeshi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CE6719E1D7427D60068D972 /* nikeshi.jpg */; };
+		3CE671B81D745A830068D972 /* s1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B01D745A830068D972 /* s1.png */; };
+		3CE671B91D745A830068D972 /* s2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B11D745A830068D972 /* s2.png */; };
+		3CE671BA1D745A830068D972 /* s3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B21D745A830068D972 /* s3.png */; };
+		3CE671BB1D745A830068D972 /* s4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B31D745A830068D972 /* s4.png */; };
+		3CE671BC1D745A830068D972 /* s5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B41D745A830068D972 /* s5.png */; };
+		3CE671BD1D745A830068D972 /* s6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B51D745A830068D972 /* s6.png */; };
+		3CE671BE1D745A830068D972 /* s7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B61D745A830068D972 /* s7.png */; };
+		3CE671BF1D745A830068D972 /* s8.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CE671B71D745A830068D972 /* s8.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +199,21 @@
 		3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSearchViewController.m; sourceTree = "<group>"; };
 		3C73720A1D67FEB8000F0D11 /* JMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLoginViewController.h; sourceTree = "<group>"; };
 		3C73720B1D67FEB8000F0D11 /* JMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLoginViewController.m; sourceTree = "<group>"; };
+		3CE6718F1D6EA16E0068D972 /* JMSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSearchResultViewController.h; sourceTree = "<group>"; };
+		3CE671901D6EA16E0068D972 /* JMSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSearchResultViewController.m; sourceTree = "<group>"; };
+		3CE671981D71CB340068D972 /* JMSysModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSysModel.h; sourceTree = "<group>"; };
+		3CE671991D71CB340068D972 /* JMSysModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSysModel.m; sourceTree = "<group>"; };
+		3CE6719B1D7424150068D972 /* JMSysDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSysDetailViewController.h; sourceTree = "<group>"; };
+		3CE6719C1D7424150068D972 /* JMSysDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSysDetailViewController.m; sourceTree = "<group>"; };
+		3CE6719E1D7427D60068D972 /* nikeshi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nikeshi.jpg; sourceTree = "<group>"; };
+		3CE671B01D745A830068D972 /* s1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s1.png; sourceTree = "<group>"; };
+		3CE671B11D745A830068D972 /* s2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s2.png; sourceTree = "<group>"; };
+		3CE671B21D745A830068D972 /* s3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s3.png; sourceTree = "<group>"; };
+		3CE671B31D745A830068D972 /* s4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s4.png; sourceTree = "<group>"; };
+		3CE671B41D745A830068D972 /* s5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s5.png; sourceTree = "<group>"; };
+		3CE671B51D745A830068D972 /* s6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s6.png; sourceTree = "<group>"; };
+		3CE671B61D745A830068D972 /* s7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s7.png; sourceTree = "<group>"; };
+		3CE671B71D745A830068D972 /* s8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s8.png; sourceTree = "<group>"; };
 		674EF6B5A44DBEB10D31B12C /* Pods-JiaLeCommunity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaLeCommunity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JiaLeCommunity/Pods-JiaLeCommunity.debug.xcconfig"; sourceTree = "<group>"; };
 		80599D74EB852583F65432F7 /* Pods-JiaLeCommunity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JiaLeCommunity.release.xcconfig"; path = "Pods/Target Support Files/Pods-JiaLeCommunity/Pods-JiaLeCommunity.release.xcconfig"; sourceTree = "<group>"; };
 		8C18B405BD66B3D63EA85FD1 /* libPods-JiaLeCommunity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JiaLeCommunity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +392,14 @@
 				3C26E58B1D2BCF640086E738 /* i1.png */,
 				3C26E58C1D2BCF640086E738 /* i2.png */,
 				3C26E58D1D2BCF640086E738 /* i3.png */,
+				3CE671B01D745A830068D972 /* s1.png */,
+				3CE671B11D745A830068D972 /* s2.png */,
+				3CE671B21D745A830068D972 /* s3.png */,
+				3CE671B31D745A830068D972 /* s4.png */,
+				3CE671B41D745A830068D972 /* s5.png */,
+				3CE671B51D745A830068D972 /* s6.png */,
+				3CE671B61D745A830068D972 /* s7.png */,
+				3CE671B71D745A830068D972 /* s8.png */,
 				3C26E58E1D2BCF640086E738 /* lab@2x.png */,
 				3C26E58F1D2BCF640086E738 /* menu@2x.png */,
 				3C26E5901D2BCF640086E738 /* message@2x.png */,
@@ -393,14 +428,21 @@
 		3C26E59C1D2BCF640086E738 /* Lab-实验室 */ = {
 			isa = PBXGroup;
 			children = (
+				3CE6719E1D7427D60068D972 /* nikeshi.jpg */,
 				3C26E59D1D2BCF640086E738 /* JMLabViewController.h */,
 				3C26E59E1D2BCF640086E738 /* JMLabViewController.m */,
 				3C7370FC1D573EC6000F0D11 /* JMSearchViewController.h */,
 				3C7370FD1D573EC6000F0D11 /* JMSearchViewController.m */,
+				3CE671981D71CB340068D972 /* JMSysModel.h */,
+				3CE671991D71CB340068D972 /* JMSysModel.m */,
 				3C4B134F1D6AF1FC00628BA5 /* JMSchoolModel.h */,
 				3C4B13501D6AF1FC00628BA5 /* JMSchoolModel.m */,
 				3C7370E61D572705000F0D11 /* JMLabListViewController.h */,
 				3C7370E71D572705000F0D11 /* JMLabListViewController.m */,
+				3CE6719B1D7424150068D972 /* JMSysDetailViewController.h */,
+				3CE6719C1D7424150068D972 /* JMSysDetailViewController.m */,
+				3CE6718F1D6EA16E0068D972 /* JMSearchResultViewController.h */,
+				3CE671901D6EA16E0068D972 /* JMSearchResultViewController.m */,
 				3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */,
 				3C7370EA1D57271D000F0D11 /* JMLabCollectionViewCell.m */,
 				3C7370EB1D57271D000F0D11 /* JMLabCollectionViewCell.xib */,
@@ -577,21 +619,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CE671B91D745A830068D972 /* s2.png in Resources */,
 				3C26E5CC1D2BCF640086E738 /* message@2x.png in Resources */,
 				3C26E5C91D2BCF640086E738 /* i3.png in Resources */,
 				3C26E5C61D2BCF640086E738 /* i0.png in Resources */,
 				3C7370F91D572D42000F0D11 /* search.png in Resources */,
 				3C26E5521D2BCF2F0086E738 /* LaunchScreen.storyboard in Resources */,
 				3C7370F61D572D42000F0D11 /* 搜索.png in Resources */,
+				3CE6719F1D7427D60068D972 /* nikeshi.jpg in Resources */,
 				3C1A64421D2E7E6200ACAB49 /* write.png in Resources */,
 				3C26E5CD1D2BCF640086E738 /* mine@2x.png in Resources */,
 				3C26E5D21D2BCF640086E738 /* shape51.png in Resources */,
+				3CE671BD1D745A830068D972 /* s6.png in Resources */,
 				3C1A648D1D2FC6BB00ACAB49 /* JMMineCell.xib in Resources */,
 				3C26E5E81D2C914C0086E738 /* n0.png in Resources */,
+				3CE671BB1D745A830068D972 /* s4.png in Resources */,
 				3C7370FA1D572D42000F0D11 /* menu.png in Resources */,
 				3C26E5D11D2BCF640086E738 /* shape3-c.png in Resources */,
 				3C7370FB1D572D42000F0D11 /* heroes.png in Resources */,
 				3C7370F51D572D42000F0D11 /* 四方@2x.png in Resources */,
+				3CE671BE1D745A830068D972 /* s7.png in Resources */,
 				3C26E5D01D2BCF640086E738 /* shape20-c.png in Resources */,
 				3C7370F71D572D42000F0D11 /* 实验室标签.png in Resources */,
 				3C26E5C41D2BCF640086E738 /* h2.png in Resources */,
@@ -599,8 +646,10 @@
 				3C26E5CB1D2BCF640086E738 /* menu@2x.png in Resources */,
 				3C26E5CF1D2BCF640086E738 /* search@2x.png in Resources */,
 				3C26E5E21D2BCF640086E738 /* 图层 11.png in Resources */,
+				3CE671BC1D745A830068D972 /* s5.png in Resources */,
 				3C26E5C21D2BCF640086E738 /* h0.png in Resources */,
 				3C26E54F1D2BCF2F0086E738 /* Assets.xcassets in Resources */,
+				3CE671B81D745A830068D972 /* s1.png in Resources */,
 				3C26E5C81D2BCF640086E738 /* i2.png in Resources */,
 				3C26E5CA1D2BCF640086E738 /* lab@2x.png in Resources */,
 				3C26E54D1D2BCF2F0086E738 /* Main.storyboard in Resources */,
@@ -609,7 +658,9 @@
 				3C7370F81D572D42000F0D11 /* 学分标签.png in Resources */,
 				3C1A643D1D2E3A4F00ACAB49 /* 199.png in Resources */,
 				3C7370ED1D57271D000F0D11 /* JMLabCollectionViewCell.xib in Resources */,
+				3CE671BA1D745A830068D972 /* s3.png in Resources */,
 				3C26E5D91D2BCF640086E738 /* JMNoticeCell.xib in Resources */,
+				3CE671BF1D745A830068D972 /* s8.png in Resources */,
 				3C26E5C71D2BCF640086E738 /* i1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,6 +738,7 @@
 				3C4B134E1D6AA24D00628BA5 /* JMUserModel.m in Sources */,
 				3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */,
 				3C26E5D61D2BCF640086E738 /* JMMessageViewController.m in Sources */,
+				3CE671911D6EA16E0068D972 /* JMSearchResultViewController.m in Sources */,
 				3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */,
 				3C26E5DB1D2BCF640086E738 /* JMNoticeHeaderViewController.m in Sources */,
 				3C26E5D81D2BCF640086E738 /* JMNoticeCell.m in Sources */,
@@ -702,11 +754,13 @@
 				3C26E5D41D2BCF640086E738 /* JMMenuScrollView.m in Sources */,
 				3C26E5DC1D2BCF640086E738 /* JMNoticeViewController.m in Sources */,
 				3C26E5D51D2BCF640086E738 /* JMLabViewController.m in Sources */,
+				3CE6719D1D7424150068D972 /* JMSysDetailViewController.m in Sources */,
 				3C26E5E11D2BCF640086E738 /* ViewController.m in Sources */,
 				3C26E5DE1D2BCF640086E738 /* main.m in Sources */,
 				3C26E5BD1D2BCF640086E738 /* JMTabBarController.m in Sources */,
 				3C26E5BB1D2BCF640086E738 /* JMChatViewController.m in Sources */,
 				3C26E5D71D2BCF640086E738 /* JMMineViewController.m in Sources */,
+				3CE6719A1D71CB340068D972 /* JMSysModel.m in Sources */,
 				3C4B13511D6AF1FC00628BA5 /* JMSchoolModel.m in Sources */,
 				3C7370FE1D573EC6000F0D11 /* JMSearchViewController.m in Sources */,
 				3C1A648C1D2FC6BB00ACAB49 /* JMMineCell.m in Sources */,

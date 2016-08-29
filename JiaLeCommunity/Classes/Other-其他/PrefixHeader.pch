@@ -23,6 +23,7 @@
 #define JIALE_USER_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_user"
 #define JIALE_MSG_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_msg"
 #define JIALE_TASK_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_task"
+#define JIALE_TASK_INFO_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_task"
 #define JIALE_SYS_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_sys"
 #define JIALE_SCHOOL_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_school"
 
