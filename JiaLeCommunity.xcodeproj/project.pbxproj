@@ -59,6 +59,7 @@
 		3C26E5E81D2C914C0086E738 /* n0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C26E5E71D2C914C0086E738 /* n0.png */; };
 		3C4B134E1D6AA24D00628BA5 /* JMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B134D1D6AA24D00628BA5 /* JMUserModel.m */; };
 		3C4B13511D6AF1FC00628BA5 /* JMSchoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B13501D6AF1FC00628BA5 /* JMSchoolModel.m */; };
+		3C5988791D751D2900D8C236 /* JMExpDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5988781D751D2900D8C236 /* JMExpDetailViewController.m */; };
 		3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370E71D572705000F0D11 /* JMLabListViewController.m */; };
 		3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7370EA1D57271D000F0D11 /* JMLabCollectionViewCell.m */; };
 		3C7370ED1D57271D000F0D11 /* JMLabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7370EB1D57271D000F0D11 /* JMLabCollectionViewCell.xib */; };
@@ -183,6 +184,8 @@
 		3C4B134D1D6AA24D00628BA5 /* JMUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUserModel.m; sourceTree = "<group>"; };
 		3C4B134F1D6AF1FC00628BA5 /* JMSchoolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSchoolModel.h; sourceTree = "<group>"; };
 		3C4B13501D6AF1FC00628BA5 /* JMSchoolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSchoolModel.m; sourceTree = "<group>"; };
+		3C5988771D751D2900D8C236 /* JMExpDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMExpDetailViewController.h; sourceTree = "<group>"; };
+		3C5988781D751D2900D8C236 /* JMExpDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMExpDetailViewController.m; sourceTree = "<group>"; };
 		3C7370E61D572705000F0D11 /* JMLabListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabListViewController.h; sourceTree = "<group>"; };
 		3C7370E71D572705000F0D11 /* JMLabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLabListViewController.m; sourceTree = "<group>"; };
 		3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabCollectionViewCell.h; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 				3C7370E71D572705000F0D11 /* JMLabListViewController.m */,
 				3CE6719B1D7424150068D972 /* JMSysDetailViewController.h */,
 				3CE6719C1D7424150068D972 /* JMSysDetailViewController.m */,
+				3C5988771D751D2900D8C236 /* JMExpDetailViewController.h */,
+				3C5988781D751D2900D8C236 /* JMExpDetailViewController.m */,
 				3CE6718F1D6EA16E0068D972 /* JMSearchResultViewController.h */,
 				3CE671901D6EA16E0068D972 /* JMSearchResultViewController.m */,
 				3C7370E91D57271D000F0D11 /* JMLabCollectionViewCell.h */,
@@ -753,6 +758,7 @@
 				3C73720C1D67FEB8000F0D11 /* JMLoginViewController.m in Sources */,
 				3C26E5D41D2BCF640086E738 /* JMMenuScrollView.m in Sources */,
 				3C26E5DC1D2BCF640086E738 /* JMNoticeViewController.m in Sources */,
+				3C5988791D751D2900D8C236 /* JMExpDetailViewController.m in Sources */,
 				3C26E5D51D2BCF640086E738 /* JMLabViewController.m in Sources */,
 				3CE6719D1D7424150068D972 /* JMSysDetailViewController.m in Sources */,
 				3C26E5E11D2BCF640086E738 /* ViewController.m in Sources */,

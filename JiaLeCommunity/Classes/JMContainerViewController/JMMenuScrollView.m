@@ -8,7 +8,7 @@
 
 #import "JMMenuScrollView.h"
 
-static const CGFloat JM_SCROLL_WIDTH  = 120;
+static const CGFloat JM_SCROLL_WIDTH  = 90;
 static const CGFloat JM_SCROLL_MARGIN = 10;
 static const CGFloat JM_INDICATOR_HEIGHT = 3;
 
