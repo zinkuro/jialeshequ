@@ -20,6 +20,8 @@
     [super viewDidLoad];
 //    self.tableView.delegate = self;
 //    self.tableView.dataSource = self;
+    
+    self.tableView.tableFooterView = [[UIView alloc]init];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuseIdentifier"];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -50,7 +52,7 @@
     if (indexPath.row == 0) {
         return WIDTH / 4 * 10 / 9 * 2;
     }
-    return 100;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

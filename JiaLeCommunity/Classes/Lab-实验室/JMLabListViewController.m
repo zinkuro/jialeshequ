@@ -9,7 +9,7 @@
 #import "JMLabListViewController.h"
 #import "JMLabCollectionViewCell.h"
 #import "AppDelegate.h"
-#import "JMSysModel.h"
+#import "JMTaskModel.h"
 #import "JMSysDetailViewController.h"
 @interface JMLabListViewController () <UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
@@ -50,7 +50,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSArray *resultArray = responseObject[@"data"];
 //        NSData *responseData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
-        NSArray *sysArray = [NSArray yy_modelArrayWithClass:[JMSysModel class] json:resultArray];
+        NSArray *sysArray = [NSArray yy_modelArrayWithClass:[JMTaskModel class] json:resultArray];
         NSLog(@"%@",sysArray);
         
         [self.dataArray addObjectsFromArray:sysArray];
@@ -113,7 +113,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JMLabCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
-    JMSysModel *model = self.dataArray[indexPath.row];
+    JMTaskModel *model = self.dataArray[indexPath.row];
 //    NSLog(@"%@",model);
     cell.model = model;
     cell.layer.cornerRadius = 8.0f;
@@ -121,9 +121,10 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    JMSysModel *model = self.dataArray[indexPath.row];
+    JMTaskModel *model = self.dataArray[indexPath.row];
     JMSysDetailViewController *detailVC = [[JMSysDetailViewController alloc]init];
     detailVC.model = model;
+    detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 

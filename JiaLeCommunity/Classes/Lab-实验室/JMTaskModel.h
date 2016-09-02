@@ -1,5 +1,5 @@
 //
-//  JMSysModel.h
+//  JMTaskModel.h
 //  JiaLeCommunity
 //
 //  Created by Jin on 16/8/27.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JMSysModel : NSObject
+@interface JMTaskModel : NSObject
 
 @property (nonatomic,assign) NSInteger success;
 @property (nonatomic,assign) NSInteger status;

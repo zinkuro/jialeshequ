@@ -7,7 +7,7 @@
 //h
 
 #import "JMLabCollectionViewCell.h"
-#import "JMSysModel.h"
+#import "JMTaskModel.h"
 @interface JMLabCollectionViewCell()
 
 @property (weak, nonatomic) IBOutlet UILabel *labNameLabel;
@@ -27,7 +27,7 @@
     // Initialization code
 }
 
-- (void)setModel:(JMSysModel *)model {
+- (void)setModel:(JMTaskModel *)model {
 //    [self.coverImageView setImageWithURL:[NSURL URLWithString:model.imgs[0]] placeholderImage:[UIImage imageNamed:@""]];
 //    self.model = model;
     

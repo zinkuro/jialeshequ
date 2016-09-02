@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JMSysModel.h"
+#import "JMTaskModel.h"
 @interface JMSysDetailViewController : UIViewController
 
-@property (nonatomic,strong) JMSysModel *model;
+@property (nonatomic,strong) JMTaskModel *model;
 
 @end

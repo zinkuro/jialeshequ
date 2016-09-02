@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JMSysModel.h"
+#import "JMTaskModel.h"
 @interface JMExpDetailViewController : UITableViewController
 
-@property (nonatomic,strong) JMSysModel *model;
+@property (nonatomic,strong) JMTaskModel *model;
 
 @end
