@@ -28,7 +28,7 @@
     
     [self creatChildControllerWithVc:[[JMLabViewController alloc]init] Title:@"实验室" image:@"lab" selectedImage:@""];
     
-    [self creatChildControllerWithVc:[[JMChatViewController alloc]init] Title:@"聊天" image:@"chat" selectedImage:@""];
+//    [self creatChildControllerWithVc:[[JMChatViewController alloc]init] Title:@"聊天" image:@"chat" selectedImage:@""];
     
     [self creatChildControllerWithVc:[[JMMineViewController alloc]init] Title:@"个人中心" image:@"mine" selectedImage:@""];
     // Do any additional setup after loading the view.

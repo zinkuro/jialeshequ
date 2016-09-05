@@ -32,16 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C26E5571D2BCF2F0086E738"
-               BuildableName = "JiaLeCommunityTests.xctest"
-               BlueprintName = "JiaLeCommunityTests"
-               ReferencedContainer = "container:JiaLeCommunity.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C26E5621D2BCF2F0086E738"
                BuildableName = "JiaLeCommunityUITests.xctest"
                BlueprintName = "JiaLeCommunityUITests"

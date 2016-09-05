@@ -12,6 +12,7 @@
 
 #import "JMBasicViewController.h"
 #import "UIView+JMExtension.h"
+#import "UIImage+JMExtension.h"
 #import "UIColor+JMColor.h"
 #import <UIImageView+AFNetworking.h>
 #import <AFHTTPSessionManager.h>

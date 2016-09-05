@@ -22,7 +22,7 @@
 @property (nonatomic,strong) JMExpDetailViewController *detailVC;
 @property (nonatomic,strong) JMExpMemberViewController *memberVC;
 @property (nonatomic,strong) JMExpCommentViewController *commentVC;
-
+@property (nonatomic,strong) UIImageView *headerImageView;
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UILabel *locationLabel;
 @property (nonatomic,strong) UIView *expView;
@@ -70,6 +70,39 @@
         _headerView.backgroundColor = [UIColor colorWithR:242 G:242 B:242];
     }
     return _headerView;
+}
+
+- (UIButton *)commentButton {
+    if (!_commentButton) {
+        _commentButton = [[UIButton alloc]init];
+        [_commentButton setTitle:@"评论" forState:UIControlStateNormal];
+        _commentButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_commentButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_commentButton setImage:[UIImage imageNamed:@"评论"] forState:UIControlStateNormal];
+    }
+    return _commentButton;
+}
+
+- (UIButton *)shareButton {
+    if (!_shareButton) {
+        _shareButton = [[UIButton alloc]init];
+        [_shareButton setTitle:@"分享" forState:UIControlStateNormal];
+        _shareButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_shareButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_shareButton setImage:[UIImage imageNamed:@"分享"] forState:UIControlStateNormal];
+    }
+    return _shareButton;
+}
+
+- (UIButton *)messageButton {
+    if (!_messageButton) {
+        _messageButton = [[UIButton alloc]init];
+        [_messageButton setTitle:@"消息" forState:UIControlStateNormal];
+        _messageButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_messageButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_messageButton setImage:[UIImage imageNamed:@"消息"] forState:UIControlStateNormal];
+    }
+    return _messageButton;
 }
 
 - (JMContainerViewController *)container {
@@ -129,16 +162,17 @@
 }
 
 - (void)creatHeaderView {
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, self.view.width, 125)];
+    _headerImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, self.view.width,self.view.height * 125 / 518)];
     
-    imageView.image = [UIImage imageNamed:@"199"];
+    _headerImageView.image = [UIImage imageNamed:@"199"];
+    
     self.titleLabel.text = self.model.title;
     self.titleLabel.textColor = [UIColor whiteColor];
     self.locationLabel.text = self.model.adress;
     self.locationLabel.textColor = [UIColor whiteColor];
 //    self.locationLabel.backgroundColor = [UIColor redColor];
 
-    [self.headerView addSubview:imageView];
+    [self.headerView addSubview:_headerImageView];
     [self.headerView addSubview:self.titleLabel];
     [self.headerView addSubview:self.locationLabel];
     [self.headerView addSubview:self.expView];
@@ -164,6 +198,34 @@
         make.width.equalTo(weakself.headerView.mas_width).multipliedBy(4 / 5.0f);
         make.height.equalTo(weakself.headerView.mas_height).multipliedBy(1 / 15.0f);
     }];
+
+    [self.commentButton setContentMode:UIViewContentModeScaleToFill];
+    
+    [self.headerView addSubview:self.commentButton];
+    [self.headerView addSubview:self.shareButton];
+    [self.headerView addSubview:self.messageButton];
+    
+    [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakself.expView.mas_right).offset(12);
+        make.top.equalTo(weakself.headerImageView.mas_bottom);
+        make.bottom.equalTo(weakself.headerView.mas_bottom);
+        make.width.mas_equalTo((weakself.headerView.width - 24 - weakself.headerView.width * 96 / 320.0f) / 3.0f);
+    }];
+    
+    [self.shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakself.commentButton.mas_right);
+        make.top.equalTo(weakself.headerImageView.mas_bottom);
+        make.bottom.equalTo(weakself.headerView.mas_bottom);
+        make.width.equalTo(weakself.commentButton);
+    }];
+    
+    [self.messageButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(weakself.shareButton.mas_right);
+        make.top.equalTo(weakself.headerImageView.mas_bottom);
+        make.bottom.equalTo(weakself.headerView.mas_bottom);
+        make.width.equalTo(weakself.commentButton);
+    }];
+    
 }
 
 - (void)creatUI {

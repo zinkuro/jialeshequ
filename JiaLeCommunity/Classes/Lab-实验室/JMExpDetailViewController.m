@@ -45,14 +45,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
-    return 3;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return WIDTH / 4 * 10 / 9 * 2;
+    }else if (indexPath.row == 1) {
+        return [self getHeightWithDesc:self.model.desc font:[UIFont systemFontOfSize:self.view.width * 12 / 320.0f]];
     }
     return 50;
+}
+
+- (CGFloat)getHeightWithDesc:(NSString *)desc
+                        font:(UIFont *)font {
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.width - 24, 0)];
+    label.text = desc;
+    label.font = font;
+    label.numberOfLines = 0;
+    [label sizeToFit];
+    CGFloat height = label.frame.size.height + 50;
+    return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,11 +96,48 @@
     }
     
     if (indexPath.row == 1) {
-        cell.backgroundColor = [UIColor redColor];
+        UILabel *headLabel = [[UILabel alloc]initWithFrame:CGRectMake(12, 8, cell.contentView.width, 12)];
+        headLabel.text = @"实验简介";
+        headLabel.font = [UIFont systemFontOfSize:self.view.width * 12 / 320.0f];
+        [cell.contentView addSubview:headLabel];
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+        label.font = [UIFont systemFontOfSize:self.view.width * 12 / 320.0f];
+        label.textColor = [UIColor colorWithR:113 G:113 B:113];
+        label.numberOfLines = 0;
+        label.text = self.model.desc;
+        [label sizeToFit];
+        [cell.contentView addSubview:label];
+//        __weak typeof(self) weakself = self;
+//        label.backgroundColor = [UIColor grayColor];
+        [label mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(cell.contentView).offset(12);
+            make.right.equalTo(cell.contentView).offset(- 12);
+            make.top.equalTo(cell.contentView).offset(12);
+            make.bottom.equalTo(cell.contentView).offset(- 12);
+        }];
     }
     
     if (indexPath.row == 2) {
-        cell.backgroundColor = [UIColor blueColor];
+        UILabel *headLabel = [[UILabel alloc]initWithFrame:CGRectMake(12, 8, cell.contentView.width, 12)];
+        headLabel.text = @"附件下载";
+        headLabel.font = [UIFont systemFontOfSize:self.view.width * 12 / 320.0f];
+        [cell.contentView addSubview:headLabel];
+        
+        UILabel *attachLabel = [[UILabel alloc]initWithFrame:CGRectMake(12, 30, cell.contentView.width, 12)];
+        attachLabel.textColor = [UIColor colorWithR:26 G:143 B:183];
+        attachLabel.font = [UIFont systemFontOfSize:self.view.width * 12 / 320.0f];
+        NSMutableAttributedString *content = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"附件"]];
+        NSRange contentRange = {0,[content length]};
+        [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
+        
+        attachLabel.attributedText = content;
+        [cell.contentView addSubview:attachLabel];
+
+    }
+    
+    if (indexPath.row == 3) {
+    
     }
     
     // Configure the cell...
