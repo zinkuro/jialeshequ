@@ -14,14 +14,29 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cover.png" translatesAutoresizingMaskIntoConstraints="NO" id="t5L-fa-Wy0">
+                                <rect key="frame" x="27" y="290" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="t5L-fa-Wy0" secondAttribute="bottom" id="3FQ-XJ-2dv"/>
+                            <constraint firstAttribute="trailing" secondItem="t5L-fa-Wy0" secondAttribute="trailing" id="OBc-Sm-7Zu"/>
+                            <constraint firstItem="t5L-fa-Wy0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Tiy-iw-Yac"/>
+                            <constraint firstItem="t5L-fa-Wy0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="aba-pL-C48"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cover.png" width="1080" height="1920"/>
+    </resources>
 </document>

@@ -16,4 +16,8 @@
 
 - (void)creatUI;
 
+- (void)creatNavButtonWithImage:(NSString *)image
+                  selectedImage:(NSString *)selectedImage
+                        isRight:(BOOL)isRight;
+
 @end

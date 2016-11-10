@@ -28,7 +28,7 @@
 }
 
 - (void)setModel:(JMMineCellModel *)model {
-    [self.avatarImageView setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@""]];
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@""]];
     self.timeLabel.text = model.timeString;
     self.timeLabel.textColor = [UIColor colorWithR:183 G:183 B:183];
     self.timeLabel.font = [UIFont systemFontOfSize:12];

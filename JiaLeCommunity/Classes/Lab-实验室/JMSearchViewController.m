@@ -73,7 +73,9 @@
     [self.view addSubview:self.labScrollView];
     
     [self getSchoolList];
-    
+    UITapGestureRecognizer *resignTextTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(resignText)];
+    [self.schoolScrollView addGestureRecognizer:resignTextTap];
+    [self.labScrollView addGestureRecognizer:resignTextTap];
 }
 
 - (void)creatSysButtons {
@@ -242,6 +244,14 @@
 
 - (void)cancelClick {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)resignText {
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            [view resignFirstResponder];
+        }
+    }
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color {

@@ -28,7 +28,7 @@
     self.detailLabel.text = model.detailText;
     self.detailLabel.numberOfLines = 0;
     self.commentLabel.text = model.numberText;
-    [self.coverImageView setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@""]];
+    [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:model.imageURL] placeholderImage:[UIImage imageNamed:@""]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

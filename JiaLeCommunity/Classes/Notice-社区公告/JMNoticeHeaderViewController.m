@@ -51,7 +51,12 @@ static const NSInteger TAG_NUM = 100;
     [super viewDidLoad];
     [self creatUI];
     _timer = [NSTimer scheduledTimerWithTimeInterval:3.5 target:self selector:@selector(timerGo) userInfo:@"???" repeats:YES];
+    [[NSRunLoop mainRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
     // Do any additional setup after loading the view.
+}
+
+- (void)scrollTimer {
+    
 }
 
 - (void)creatUI {

@@ -8,6 +8,7 @@
 
 #import "JMBasicViewController.h"
 #import "AppDelegate.h"
+#import "JMLoginViewController.h"
 @interface JMBasicViewController ()
 
 
@@ -59,11 +60,24 @@
     [button setBackgroundImage:[UIImage imageNamed:selectedImage] forState:UIControlStateHighlighted];
     button.size = button.currentBackgroundImage.size;
     
+//    UIButton*rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0,0,30,30)];
+//    [rightButton setImage:[UIImage imageNamed:@"search.png"]forState:UIControlStateNormal];
+//    [rightButton addTarget:selfaction:@selector(searchprogram)forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem*rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+//    self.navigationItem.rightBarButtonItem = rightItem;
+    
     if (isRight) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
     }else {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+        [button addTarget:self action:@selector(dismissTab) forControlEvents:UIControlEventTouchUpInside];
     }
+}
+
+- (void)dismissTab {
+//    AppDelegate *delegate =  (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    delegate.window.rootViewController = [JMLoginViewController sharedInstance];
+    [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

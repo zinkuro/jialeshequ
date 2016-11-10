@@ -10,6 +10,8 @@
 #import "JMTaskModel.h"
 @interface JMLabCollectionViewCell()
 
+@property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *labNameLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
@@ -30,7 +32,7 @@
 - (void)setModel:(JMTaskModel *)model {
 //    [self.coverImageView setImageWithURL:[NSURL URLWithString:model.imgs[0]] placeholderImage:[UIImage imageNamed:@""]];
 //    self.model = model;
-    
+    self.coverImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"cover%d",arc4random()%3]];
     self.labNameLabel.text = model.title;
     self.typeLabel.text = model.group_name;
     self.scoreLabel.text = [NSString stringWithFormat:@"%@学分",model.credit];

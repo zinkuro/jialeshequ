@@ -20,6 +20,8 @@
     [super viewDidLoad];
 //    self.tableView.delegate = self;
 //    self.tableView.dataSource = self;
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    [self.tableView setLayoutMargins:UIEdgeInsetsZero];
     
     self.tableView.tableFooterView = [[UIView alloc]init];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuseIdentifier"];
@@ -38,6 +40,10 @@
 
 #pragma mark - Table view data source
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [cell setSeparatorInset:UIEdgeInsetsZero];
+    [cell setLayoutMargins:UIEdgeInsetsZero];
+}
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 ////#warning Incomplete implementation, return the number of sections
 //    return 2;

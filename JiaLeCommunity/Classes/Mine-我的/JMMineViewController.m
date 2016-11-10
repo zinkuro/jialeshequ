@@ -26,6 +26,8 @@
 
 @property (nonatomic,strong) UIViewController *viewController1;
 @property (nonatomic,strong) UIViewController *viewController2;
+@property (nonatomic,strong) UIViewController *viewController3;
+
 
 @property (nonatomic,strong) JMUserModel *userModel;
 
@@ -36,7 +38,7 @@
 - (JMMineTableViewController *)statusTableViewController {
     if (!_statusTableViewController) {
         _statusTableViewController = [[JMMineTableViewController alloc]init];
-        _statusTableViewController.title = @"动态";
+        _statusTableViewController.title = @"通知";
         _statusTableViewController.delegate = self;
     }
     return _statusTableViewController;
@@ -46,12 +48,19 @@
     if (!_container) {
         _viewController1 = [[UIViewController alloc]init];
         _viewController1.view.backgroundColor = [UIColor colorWithR:arc4random()%256 G:arc4random()%256 B:arc4random()%256];
-        _viewController1.title = @"好友";
+        _viewController1.title = @"回帖";
+        
         _viewController2 = [[UIViewController alloc]init];
         _viewController2.view.backgroundColor = [UIColor colorWithR:arc4random()%256 G:arc4random()%256 B:arc4random()%256];
-        _viewController2.title = @"社区";
+        _viewController2.title = @"站内信";
         
-        _container = [[JMContainerViewController alloc]initWithControllers:@[self.statusTableViewController,_viewController1,_viewController2] topBarHeight:self.backgroundView.height parentViewController:self];
+        
+        _viewController3 = [[UIViewController alloc]init];
+        _viewController3.view.backgroundColor = [UIColor colorWithR:arc4random()%256 G:arc4random()%256 B:arc4random()%256];
+        _viewController3.title = @"个人资料";
+        
+        
+        _container = [[JMContainerViewController alloc]initWithControllers:@[self.statusTableViewController,_viewController1,_viewController2,_viewController3] topBarHeight:self.backgroundView.height parentViewController:self];
 //        _container.contentScrollView.height = self.view.height - self.backgroundView.height - 50 - 45;
     }
     return _container;
@@ -128,7 +137,7 @@
         NSLog(@"%@",self.userModel);
         
         self.backgroundImageView.image = [UIImage imageNamed:@"199"];
-        [self.avatarView setImageWithURL:[NSURL URLWithString:@"http://i0.hdslb.com/bfs/face/2bc3fdc36fe82aa26a85ff8187d903d3e5987c35.jpg"] placeholderImage:[UIImage imageNamed:@""]];
+        [self.avatarView sd_setImageWithURL:[NSURL URLWithString:@"http://i0.hdslb.com/bfs/face/2bc3fdc36fe82aa26a85ff8187d903d3e5987c35.jpg"] placeholderImage:[UIImage imageNamed:@""]];
         self.nameLabel.text = self.userModel.name;
         self.signLabel.text = self.userModel.desc;
 //        NSData *jasonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
@@ -188,7 +197,7 @@
     }];
     
     [self.signLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakself.nameLabel.mas_bottom).offset(8* SCALE);
+        make.top.equalTo(weakself.nameLabel.mas_bottom).offset(8 * SCALE);
         make.left.equalTo(weakself.backgroundView).offset(weakself.view.width / 4);
         make.right.equalTo(weakself.backgroundView).offset(- weakself.view.width / 4);
         make.bottom.equalTo(weakself.signLabel.mas_top).offset(30 * SCALE);

@@ -54,6 +54,7 @@
     
     self.container.menuItemFont = [UIFont systemFontOfSize:self.view.size.width * 15 / 414.0f];
     self.navigationItem.titleView = self.searchBar;
+    
     NSLog(@"%@",self.token);
     NSDictionary *dict = @{@"school":@"16",@"token":self.token};
     [self.manager GET:JIALE_TASK_URL parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {

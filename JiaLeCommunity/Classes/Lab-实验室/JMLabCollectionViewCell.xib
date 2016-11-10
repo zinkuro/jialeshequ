@@ -20,7 +20,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="八种高等真菌中抗氧化活性成分的发现" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZq-fC-xgj">
                         <rect key="frame" x="8" y="97" width="142" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="实验室标签.png" translatesAutoresizingMaskIntoConstraints="NO" id="un9-Dw-q0R">
@@ -83,6 +83,7 @@
             </constraints>
             <size key="customSize" width="158" height="151"/>
             <connections>
+                <outlet property="coverImageView" destination="dNr-nd-bOT" id="N2F-42-Oh2"/>
                 <outlet property="labNameLabel" destination="KZq-fC-xgj" id="zED-2f-fl1"/>
                 <outlet property="scoreLabel" destination="xIa-Bw-tmb" id="5Tl-Lr-HFl"/>
                 <outlet property="typeLabel" destination="5mw-sH-qHt" id="QdJ-yt-mxM"/>
