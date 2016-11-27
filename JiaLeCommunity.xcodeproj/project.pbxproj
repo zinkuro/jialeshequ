@@ -120,6 +120,13 @@
 		3C9754FE1D90E55000390E2C /* 收藏亮@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9754F81D90E55000390E2C /* 收藏亮@2x.png */; };
 		3CB89CED1DB5C27A0000D96F /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CB89CEC1DB5C27A0000D96F /* cover.png */; };
 		3CB89CF01DB7649E0000D96F /* JMPostMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB89CEF1DB7649E0000D96F /* JMPostMessageViewController.m */; };
+		3CC9759F1DE71FE000C46075 /* JMReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9759E1DE71FE000C46075 /* JMReplyModel.m */; };
+		3CC975A31DE723EE00C46075 /* JMReplyTabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975A11DE723EE00C46075 /* JMReplyTabelViewCell.m */; };
+		3CC975A41DE723EE00C46075 /* JMReplyTabelViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC975A21DE723EE00C46075 /* JMReplyTabelViewCell.xib */; };
+		3CC975A71DE7311700C46075 /* JMMineListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975A61DE7311700C46075 /* JMMineListTableViewController.m */; };
+		3CC975AA1DEB076400C46075 /* JMMineReplyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975A91DEB076400C46075 /* JMMineReplyTableViewController.m */; };
+		3CC975AD1DEB07C800C46075 /* JMReplyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975AC1DEB07C800C46075 /* JMReplyListModel.m */; };
+		3CC975B01DEB08CF00C46075 /* JMMineDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975AF1DEB08CF00C46075 /* JMMineDetailTableViewController.m */; };
 		3CD55A3F1DD451D3005DC9EB /* JMViewForOutTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD55A3E1DD451D3005DC9EB /* JMViewForOutTap.m */; };
 		3CD55A421DD45AAA005DC9EB /* JMStatusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD55A411DD45AAA005DC9EB /* JMStatusDetailViewController.m */; };
 		3CD721BE1D7E636C0044A023 /* cover0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD721BD1D7E636C0044A023 /* cover0.png */; };
@@ -344,6 +351,19 @@
 		3CB89CEC1DB5C27A0000D96F /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		3CB89CEE1DB7649E0000D96F /* JMPostMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPostMessageViewController.h; sourceTree = "<group>"; };
 		3CB89CEF1DB7649E0000D96F /* JMPostMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPostMessageViewController.m; sourceTree = "<group>"; };
+		3CC9759D1DE71FE000C46075 /* JMReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMReplyModel.h; sourceTree = "<group>"; };
+		3CC9759E1DE71FE000C46075 /* JMReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMReplyModel.m; sourceTree = "<group>"; };
+		3CC975A01DE723EE00C46075 /* JMReplyTabelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMReplyTabelViewCell.h; sourceTree = "<group>"; };
+		3CC975A11DE723EE00C46075 /* JMReplyTabelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMReplyTabelViewCell.m; sourceTree = "<group>"; };
+		3CC975A21DE723EE00C46075 /* JMReplyTabelViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMReplyTabelViewCell.xib; sourceTree = "<group>"; };
+		3CC975A51DE7311700C46075 /* JMMineListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMineListTableViewController.h; sourceTree = "<group>"; };
+		3CC975A61DE7311700C46075 /* JMMineListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMineListTableViewController.m; sourceTree = "<group>"; };
+		3CC975A81DEB076400C46075 /* JMMineReplyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMineReplyTableViewController.h; sourceTree = "<group>"; };
+		3CC975A91DEB076400C46075 /* JMMineReplyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMineReplyTableViewController.m; sourceTree = "<group>"; };
+		3CC975AB1DEB07C800C46075 /* JMReplyListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMReplyListModel.h; sourceTree = "<group>"; };
+		3CC975AC1DEB07C800C46075 /* JMReplyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMReplyListModel.m; sourceTree = "<group>"; };
+		3CC975AE1DEB08CF00C46075 /* JMMineDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMineDetailTableViewController.h; sourceTree = "<group>"; };
+		3CC975AF1DEB08CF00C46075 /* JMMineDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMineDetailTableViewController.m; sourceTree = "<group>"; };
 		3CD55A3D1DD451D3005DC9EB /* JMViewForOutTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMViewForOutTap.h; sourceTree = "<group>"; };
 		3CD55A3E1DD451D3005DC9EB /* JMViewForOutTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMViewForOutTap.m; sourceTree = "<group>"; };
 		3CD55A401DD45AAA005DC9EB /* JMStatusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStatusDetailViewController.h; sourceTree = "<group>"; };
@@ -683,13 +703,18 @@
 				3C9754EC1D90D5D200390E2C /* JMStatusTableViewController.m */,
 				3CD55A401DD45AAA005DC9EB /* JMStatusDetailViewController.h */,
 				3CD55A411DD45AAA005DC9EB /* JMStatusDetailViewController.m */,
+				3CC975A01DE723EE00C46075 /* JMReplyTabelViewCell.h */,
+				3CC975A11DE723EE00C46075 /* JMReplyTabelViewCell.m */,
+				3CC975A21DE723EE00C46075 /* JMReplyTabelViewCell.xib */,
+				3CC9759D1DE71FE000C46075 /* JMReplyModel.h */,
+				3CC9759E1DE71FE000C46075 /* JMReplyModel.m */,
 				3C9754EE1D90DA4900390E2C /* JMStatusCell.h */,
 				3C9754EF1D90DA4900390E2C /* JMStatusCell.m */,
+				3C9754F01D90DA4900390E2C /* JMStatusCell.xib */,
 				3CD55A3D1DD451D3005DC9EB /* JMViewForOutTap.h */,
 				3CD55A3E1DD451D3005DC9EB /* JMViewForOutTap.m */,
 				3C5965DE1D912A1800D2FE61 /* JMStatusModel.h */,
 				3C5965DF1D912A1800D2FE61 /* JMStatusModel.m */,
-				3C9754F01D90DA4900390E2C /* JMStatusCell.xib */,
 				3CB89CF11DB764A70000D96F /* 发帖-PostMessage */,
 				3C5966501DA4ED3B00D2FE61 /* 社团-Club */,
 				3C5966251DA0A48000D2FE61 /* timeline_image_loading.png */,
@@ -711,6 +736,8 @@
 			children = (
 				3C26E5A31D2BCF640086E738 /* JMMineViewController.h */,
 				3C26E5A41D2BCF640086E738 /* JMMineViewController.m */,
+				3CC975A51DE7311700C46075 /* JMMineListTableViewController.h */,
+				3CC975A61DE7311700C46075 /* JMMineListTableViewController.m */,
 				3C4B134C1D6AA24D00628BA5 /* JMUserModel.h */,
 				3C4B134D1D6AA24D00628BA5 /* JMUserModel.m */,
 				3C1A648E1D2FC9AB00ACAB49 /* JMMineTableViewController.h */,
@@ -720,6 +747,12 @@
 				3C1A64891D2FC6BB00ACAB49 /* JMMineCell.h */,
 				3C1A648A1D2FC6BB00ACAB49 /* JMMineCell.m */,
 				3C1A648B1D2FC6BB00ACAB49 /* JMMineCell.xib */,
+				3CC975A81DEB076400C46075 /* JMMineReplyTableViewController.h */,
+				3CC975A91DEB076400C46075 /* JMMineReplyTableViewController.m */,
+				3CC975AB1DEB07C800C46075 /* JMReplyListModel.h */,
+				3CC975AC1DEB07C800C46075 /* JMReplyListModel.m */,
+				3CC975AE1DEB08CF00C46075 /* JMMineDetailTableViewController.h */,
+				3CC975AF1DEB08CF00C46075 /* JMMineDetailTableViewController.m */,
 			);
 			path = "Mine-我的";
 			sourceTree = "<group>";
@@ -1050,6 +1083,7 @@
 				3C9754F21D90DA4900390E2C /* JMStatusCell.xib in Resources */,
 				3C9754FC1D90E55000390E2C /* 评论M@2x.png in Resources */,
 				3C7370F81D572D42000F0D11 /* 学分标签.png in Resources */,
+				3CC975A41DE723EE00C46075 /* JMReplyTabelViewCell.xib in Resources */,
 				3C1A643D1D2E3A4F00ACAB49 /* 199.png in Resources */,
 				3C7370ED1D57271D000F0D11 /* JMLabCollectionViewCell.xib in Resources */,
 				3C9754FB1D90E55000390E2C /* 分享.png in Resources */,
@@ -1134,10 +1168,13 @@
 				3C26E5D31D2BCF640086E738 /* JMContainerViewController.m in Sources */,
 				3C5966411DA0A9DE00D2FE61 /* UIImageView+MJWebCache.m in Sources */,
 				3C4B134E1D6AA24D00628BA5 /* JMUserModel.m in Sources */,
+				3CC975AA1DEB076400C46075 /* JMMineReplyTableViewController.m in Sources */,
 				3C5966401DA0A9DE00D2FE61 /* SDWebImageManager+MJ.m in Sources */,
 				3C7370EC1D57271D000F0D11 /* JMLabCollectionViewCell.m in Sources */,
+				3CC9759F1DE71FE000C46075 /* JMReplyModel.m in Sources */,
 				3C26E5D61D2BCF640086E738 /* JMMessageViewController.m in Sources */,
 				3C0A07FB1D7D735000136063 /* UIImage+JMExtension.m in Sources */,
+				3CC975A71DE7311700C46075 /* JMMineListTableViewController.m in Sources */,
 				3CE671911D6EA16E0068D972 /* JMSearchResultViewController.m in Sources */,
 				3CFEABDA1DCF3A1700E45471 /* CLTextView.m in Sources */,
 				3C7370E81D572705000F0D11 /* JMLabListViewController.m in Sources */,
@@ -1162,10 +1199,13 @@
 				3C1A64961D2FD6DE00ACAB49 /* JMMineCellModel.m in Sources */,
 				3CFEABCC1DCF382B00E45471 /* TZAssetModel.m in Sources */,
 				3C360E7B1DD4A0D90019A38F /* KxMenu.m in Sources */,
+				3CC975AD1DEB07C800C46075 /* JMReplyListModel.m in Sources */,
+				3CC975B01DEB08CF00C46075 /* JMMineDetailTableViewController.m in Sources */,
 				3C0A076C1D7923DB00136063 /* JMExpCommentViewController.m in Sources */,
 				3C26E5BC1D2BCF640086E738 /* JMBasicViewController.m in Sources */,
 				3CB89CF01DB7649E0000D96F /* JMPostMessageViewController.m in Sources */,
 				3C26E5DA1D2BCF640086E738 /* JMNoticeCellModel.m in Sources */,
+				3CC975A31DE723EE00C46075 /* JMReplyTabelViewCell.m in Sources */,
 				3CFEABD41DCF382B00E45471 /* UIView+Layout.m in Sources */,
 				3C26E5DF1D2BCF640086E738 /* UIColor+JMColor.m in Sources */,
 				3C26E5D41D2BCF640086E738 /* JMMenuScrollView.m in Sources */,
