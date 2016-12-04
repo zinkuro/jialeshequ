@@ -127,6 +127,7 @@
 		3CC975AA1DEB076400C46075 /* JMMineReplyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975A91DEB076400C46075 /* JMMineReplyTableViewController.m */; };
 		3CC975AD1DEB07C800C46075 /* JMReplyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975AC1DEB07C800C46075 /* JMReplyListModel.m */; };
 		3CC975B01DEB08CF00C46075 /* JMMineDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975AF1DEB08CF00C46075 /* JMMineDetailTableViewController.m */; };
+		3CC975B31DF4180A00C46075 /* JMReplyDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC975B21DF4180A00C46075 /* JMReplyDetailTableViewController.m */; };
 		3CD55A3F1DD451D3005DC9EB /* JMViewForOutTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD55A3E1DD451D3005DC9EB /* JMViewForOutTap.m */; };
 		3CD55A421DD45AAA005DC9EB /* JMStatusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD55A411DD45AAA005DC9EB /* JMStatusDetailViewController.m */; };
 		3CD721BE1D7E636C0044A023 /* cover0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD721BD1D7E636C0044A023 /* cover0.png */; };
@@ -364,6 +365,8 @@
 		3CC975AC1DEB07C800C46075 /* JMReplyListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMReplyListModel.m; sourceTree = "<group>"; };
 		3CC975AE1DEB08CF00C46075 /* JMMineDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMineDetailTableViewController.h; sourceTree = "<group>"; };
 		3CC975AF1DEB08CF00C46075 /* JMMineDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMineDetailTableViewController.m; sourceTree = "<group>"; };
+		3CC975B11DF4180A00C46075 /* JMReplyDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMReplyDetailTableViewController.h; sourceTree = "<group>"; };
+		3CC975B21DF4180A00C46075 /* JMReplyDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMReplyDetailTableViewController.m; sourceTree = "<group>"; };
 		3CD55A3D1DD451D3005DC9EB /* JMViewForOutTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMViewForOutTap.h; sourceTree = "<group>"; };
 		3CD55A3E1DD451D3005DC9EB /* JMViewForOutTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMViewForOutTap.m; sourceTree = "<group>"; };
 		3CD55A401DD45AAA005DC9EB /* JMStatusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStatusDetailViewController.h; sourceTree = "<group>"; };
@@ -706,6 +709,8 @@
 				3CC975A01DE723EE00C46075 /* JMReplyTabelViewCell.h */,
 				3CC975A11DE723EE00C46075 /* JMReplyTabelViewCell.m */,
 				3CC975A21DE723EE00C46075 /* JMReplyTabelViewCell.xib */,
+				3CC975B11DF4180A00C46075 /* JMReplyDetailTableViewController.h */,
+				3CC975B21DF4180A00C46075 /* JMReplyDetailTableViewController.m */,
 				3CC9759D1DE71FE000C46075 /* JMReplyModel.h */,
 				3CC9759E1DE71FE000C46075 /* JMReplyModel.m */,
 				3C9754EE1D90DA4900390E2C /* JMStatusCell.h */,
@@ -1223,6 +1228,7 @@
 				3C26E5BD1D2BCF640086E738 /* JMTabBarController.m in Sources */,
 				3C26E5BB1D2BCF640086E738 /* JMChatViewController.m in Sources */,
 				3CFEABD71DCF38DE00E45471 /* CLPhotosVIew.m in Sources */,
+				3CC975B31DF4180A00C46075 /* JMReplyDetailTableViewController.m in Sources */,
 				3C59661D1D9E046800D2FE61 /* FFDropDownMenuTriangleView.m in Sources */,
 				3C5966191D9E046800D2FE61 /* FFDropDownMenuBasedCell.m in Sources */,
 				3CFEABB01DCED40100E45471 /* CustomPresentAnimationCotroller.m in Sources */,

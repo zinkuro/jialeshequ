@@ -120,9 +120,10 @@
         NSLog(@"%@",self.userModel);
         
         self.backgroundImageView.image = [UIImage imageNamed:@"199"];
-        [self.avatarView sd_setImageWithURL:[NSURL URLWithString:@"http://i0.hdslb.com/bfs/face/2bc3fdc36fe82aa26a85ff8187d903d3e5987c35.jpg"] placeholderImage:[UIImage imageNamed:@""]];
+        [self.avatarView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.jialeshequ.com/%@",self.userModel.pic]] placeholderImage:[UIImage imageNamed:@"timeline_image_loading"]];
         self.nameLabel.text = self.userModel.name;
         self.signLabel.text = self.userModel.desc;
+        self.statusTableViewController.model = self.userModel;
 //        NSData *jasonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
 //        NSString *jasonStr = [[NSString alloc]initWithData:jasonData encoding:NSUTF8StringEncoding];
 //        NSLog(@"%@",jasonStr);

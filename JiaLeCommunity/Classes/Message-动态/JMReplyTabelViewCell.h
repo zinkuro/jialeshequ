@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *replyButon;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
 @property (nonatomic,strong) JMReplyModel *model;
 
 @end

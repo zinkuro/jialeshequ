@@ -7,7 +7,7 @@
 //
 
 #import "JMReplyTabelViewCell.h"
-
+#import "JMReplyDetailTableViewController.h"
 @implementation JMReplyTabelViewCell
 
 - (void)awakeFromNib {
@@ -19,17 +19,21 @@
     self.avatarImageView.layer.masksToBounds = YES;
 }
 
+
 - (void)setModel:(JMReplyModel *)model {
     [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.pic]] placeholderImage:[UIImage imageNamed:@"timeline_image_loading"]];
-    self.contentLabel.text = model.content;
     self.nameLabel.text = model.uname;
+
+    NSString * htmlString = model.content;
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+    self.contentLabel.attributedText = attrStr;
+    [self layoutIfNeeded];
+    model.cellHeight = CGRectGetMaxY(self.contentLabel.frame) + 20;
 //    [self.replyButon setTitle:@"" forState:UIControlStateNormal];
-    [self.replyButon addTarget:self action:@selector(reply) forControlEvents:UIControlEventTouchUpInside];
+//    [self.replyButon addTarget:self action:@selector(reply) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)reply {
-    NSLog(@"reply");
-}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

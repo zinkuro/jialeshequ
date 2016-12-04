@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class JMUserModel;
 @interface JMMineDetailTableViewController : UITableViewController
+
+@property (nonatomic,strong) JMUserModel *model;
 
 @end

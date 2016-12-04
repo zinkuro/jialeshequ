@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class JMUserModel;
 @protocol JMHeaderViewChangeDelegate <NSObject>
 
 - (void)hideHeaderView;
@@ -18,5 +18,5 @@
 @interface JMMineListTableViewController : UITableViewController
 
 @property (nonatomic,weak) id<JMHeaderViewChangeDelegate> delegate;
-
+@property (nonatomic,strong) JMUserModel *model;
 @end

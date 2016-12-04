@@ -7,7 +7,7 @@
 //
 
 #import "JMMineDetailTableViewController.h"
-
+#import "JMUserModel.h"
 @interface JMMineDetailTableViewController ()
 
 @end
@@ -47,16 +47,70 @@
     }
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailData"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"detailData"];
+        if (indexPath.section == 0) {
+            cell.textLabel.text = @"个人头像";
+            UIImageView *avatar = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+            avatar.layer.masksToBounds = YES;
+            avatar.layer.cornerRadius = 25;
+            NSLog(@"http://www.jialeshequ.com/%@",self.model.pic);
+            [avatar sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.jialeshequ.com/%@",self.model.pic]] placeholderImage:[UIImage imageNamed:@"timeline_image_loading"]];;
+            cell.accessoryView = avatar;
+        } else if (indexPath.section == 1) {
+            if (indexPath.row == 0) {
+                cell.textLabel.text = @"姓名";
+                cell.detailTextLabel.text = self.model.name;
+            }else if (indexPath.row == 1) {
+                cell.textLabel.text  = @"账号";
+            }else if (indexPath.row == 2) {
+                cell.textLabel.text = @"性别";
+                cell.detailTextLabel.text = self.model.sex == 1?@"男":@"女";
+            }else if (indexPath.row == 3) {
+                cell.textLabel.text = @"个性签名";
+                cell.detailTextLabel.text = self.model.desc;
+            }
+        } else if (indexPath.section == 2) {
+            if (indexPath.row == 0) {
+                cell.textLabel.text = @"地区";
+//                cell.detailTextLabel.text = self.model.;
+            }else if (indexPath.row == 1) {
+                cell.textLabel.text  = @"所属大学";
+                cell.detailTextLabel.text = self.model.school_name;
+            }else if (indexPath.row == 2) {
+                cell.textLabel.text = @"绑定邮箱";
+//                cell.detailTextLabel.text = self.model.sex == 0?@"男":@"女";
+            }else if (indexPath.row == 3) {
+                cell.textLabel.text = @"修改密码";
+//                cell.detailTextLabel.text = self.model.desc;
+            }
+        } else {
+            cell.textLabel.text = @"版本更新";
+        }
+    }
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 80;
+    }
+    return 50;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 8;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 8;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

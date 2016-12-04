@@ -11,6 +11,7 @@
 #import "JMStatusCell.h"
 #import "JMReplyModel.h"
 #import "JMReplyTabelViewCell.h"
+#import "JMReplyDetailTableViewController.h"
 @interface JMStatusDetailViewController () <UITableViewDelegate, UITableViewDataSource,UIWebViewDelegate>
 
 @property (strong,nonatomic) AFHTTPSessionManager *manager;
@@ -132,12 +133,24 @@
     }     // Configure the cell...
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    JMReplyDetailTableViewController *detailReply = [[JMReplyDetailTableViewController alloc]init];
+    detailReply.model = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:detailReply animated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && indexPath.row == 0) {
         return self.newModel.cellHeight;
     } else {
-        return 76;
+        JMReplyModel *model = self.dataArray[indexPath.row];
+        return model.cellHeight;
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    NSLog(@"estimate");
+    return 500;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
