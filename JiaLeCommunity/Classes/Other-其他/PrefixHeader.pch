@@ -22,6 +22,17 @@
 #import <MJRefresh.h>
 #import <MJPhotoBrowser.h>
 
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
 #define JIALE_LOGIN_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_login"
 #define JIALE_COMMENT_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_comment"
 #define JIALE_USER_URL @"http://www.jialeshequ.com/user.php?a=basic&f=api_get_user"
@@ -39,6 +50,8 @@
 #define JIALE_JOINED_CLUB_URL @"http://www.jialeshequ.com/note.php?a=api&f=api_get_join_list"
 #define JIALE_POST_MSG_URL @"http://www.jialeshequ.com/note.php?a=api&f=api_add_msg"
 #define JIALE_MY_NOTE @"http://www.jialeshequ.com/note.php?a=api&f=api_get_my_note_msg"
+#define JIALE_REPLY_URL @"http://www.jialeshequ.com/note.php?a=api&f=api_post_note_reply"
+
 //Users/jin/Desktop/Workspace/JiaLeCommunity/JiaLeCommunity/Classes/Other-其他/PrefixHeader.pch
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

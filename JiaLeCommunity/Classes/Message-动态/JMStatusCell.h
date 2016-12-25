@@ -18,5 +18,4 @@
 
 @property (nonatomic,strong) JMStatusModel *model;
 
-
 @end

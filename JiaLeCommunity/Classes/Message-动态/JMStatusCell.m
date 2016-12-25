@@ -12,15 +12,18 @@
 #import "UIImageView+MJWebCache.h"
 #import "JMViewForOutTap.h"
 
+#import "JSONKit.h"
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define TAG_NUM 1000
-@interface JMStatusCell ()
+@interface JMStatusCell ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (nonatomic, strong) UIWebView *web;
 //@property (weak, nonatomic) IBOutlet UIButton *commentButton;
 //@property (weak, nonatomic) IBOutlet UIButton *likedButton;
 //@property (weak, nonatomic) IBOutlet UIButton *collectButton;
@@ -111,23 +114,17 @@
     
     NSString *contentStr = [NSString string];
     NSLog(@"content == %@",model.content);
+    
+    
     if (model.content.length > 0 && self.isDetail) {
         NSLog(@"shouldshowhtmlText");
+        
         NSString * htmlString = model.content;
         
         NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
         
-//        
-//        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"#%@# %@",model.title,contentStr]];
-//        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithR:81 G:168 B:233] range:NSMakeRange(0, model.title.length + 2)];
-//        
-//        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
-//        [paragraphStyle setLineSpacing:4];
-//        
-//        [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:15] range:NSMakeRange(0, model.title.length + 3 + contentStr.length)];
-//        [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, model.title.length + 3 + contentStr.length)];
-        
         self.contentLabel.attributedText = attrStr;
+        [self getHtmlStringWithHtmlString:htmlString];
         
     } else {
 //        self.imagesView.hidden = NO;
@@ -275,6 +272,9 @@
     [browser show];
 }
 
+- (void)getHtmlStringWithHtmlString:(NSString *)string {
+    
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

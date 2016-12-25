@@ -10,9 +10,12 @@
 
 @implementation JMReplyModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"child":[JMReplyModel class]};
+}
+
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"reply_id" : @"id"};
     
 }
-
 @end

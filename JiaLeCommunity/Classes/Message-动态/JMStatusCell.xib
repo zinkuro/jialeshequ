@@ -28,7 +28,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kta-Du-OM7">
-                        <rect key="frame" x="0.0" y="611" width="163" height="13"/>
+                        <rect key="frame" x="0.0" y="610" width="163" height="13"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="o98-XB-5bd"/>
                         </constraints>
@@ -76,7 +76,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaR-fv-zYm">
-                        <rect key="frame" x="163" y="611" width="163" height="13"/>
+                        <rect key="frame" x="163" y="610" width="163" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <inset key="titleEdgeInsets" minX="4" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -85,14 +85,14 @@
                         </state>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-hU-hEW">
-                        <rect key="frame" x="0.0" y="643" width="489" height="1"/>
+                        <rect key="frame" x="0.0" y="642" width="489" height="1"/>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="ZZO-XT-PRZ"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cy-Nj-i3y">
-                        <rect key="frame" x="0.0" y="635" width="489" height="8"/>
+                        <rect key="frame" x="0.0" y="634" width="489" height="8"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="8" id="O7T-nu-3f4"/>
@@ -105,7 +105,7 @@
                         </variation>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-cz-gTC">
-                        <rect key="frame" x="0.0" y="634" width="489" height="1"/>
+                        <rect key="frame" x="0.0" y="633" width="489" height="1"/>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.29999999999999999" id="10p-CE-UqD"/>
@@ -118,7 +118,7 @@
                         </variation>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzQ-sy-alb">
-                        <rect key="frame" x="326" y="611" width="163" height="13"/>
+                        <rect key="frame" x="326" y="610" width="163" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <inset key="contentEdgeInsets" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <state key="normal" title="Button" image="收藏亮.png">
@@ -126,7 +126,7 @@
                         </state>
                     </button>
                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Twg-7I-iCM" customClass="JMViewForOutTap">
-                        <rect key="frame" x="0.0" y="91" width="489" height="510"/>
+                        <rect key="frame" x="0.0" y="87" width="489" height="510"/>
                         <color key="backgroundColor" red="0.56470588239999997" green="0.56470588239999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </subviews>

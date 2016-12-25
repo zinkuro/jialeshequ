@@ -10,4 +10,5 @@
 @class JMReplyModel;
 @interface JMReplyDetailTableViewController : UITableViewController
 @property (nonatomic,strong) JMReplyModel *model;
+@property (nonatomic,strong) NSString *token;
 @end
