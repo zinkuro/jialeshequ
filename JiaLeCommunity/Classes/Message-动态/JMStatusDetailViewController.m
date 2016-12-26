@@ -157,6 +157,10 @@
     self.scroll.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     self.scroll.scrollEnabled = NO;
     self.scroll.contentSize = m_coreText.frame.size;
+    //    CGRect oldFrame = m_coreText.frame;
+    
+    CGRect newFrame = CGRectMake(0, 0, m_coreText.frame.size.width, m_coreText.frame.size.height + 60);
+    self.scroll.size = newFrame.size;
     [self.scroll addSubview:m_coreText];
     
     [self.commentButton setTitle:[NSString stringWithFormat:@"%zd",self.model.comment_num] forState:UIControlStateNormal];
@@ -198,7 +202,7 @@
     UIView *wildView = [[UIView alloc]init];
     wildView.backgroundColor = [UIColor colorWithR:249.0 G:249.0 B:249.0];
     [self.scroll addSubview:wildView];
-
+    
     [wildView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(lineView.mas_bottom).offset(0);
         make.left.equalTo(weakself.commentButton.mas_left).offset(0);
@@ -208,7 +212,7 @@
     UIView *bottomLineView = [[UIView alloc]init];
     bottomLineView.backgroundColor = [UIColor colorWithR:225.0 G:225.0 B:225.0];
     [self.scroll addSubview:bottomLineView];
-
+    
     [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(wildView.mas_bottom).offset(0);
         make.left.equalTo(weakself.commentButton.mas_left).offset(0);
@@ -219,19 +223,19 @@
     
     self.tableView.tableHeaderView = self.scroll;
     /*[self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(m_coreText.mas_bottom).offset(30);
-        make.left.equalTo(weakself.scroll.mas_left).offset(0);
-        make.width.mas_equalTo(SCREEN_WIDTH);
-        make.height.mas_equalTo(100);
-    }];
-    
-    [self.tableView reloadData];
-    self.scroll.backgroundColor = [UIColor redColor];
-    CGSize oldSize = self.scroll.size;
-    CGSize addTableSize = CGSizeMake(SCREEN_WIDTH, oldSize.height + self.tableView.contentSize.height);
-    self.scroll.size = addTableSize;*/
+     make.top.equalTo(m_coreText.mas_bottom).offset(30);
+     make.left.equalTo(weakself.scroll.mas_left).offset(0);
+     make.width.mas_equalTo(SCREEN_WIDTH);
+     make.height.mas_equalTo(100);
+     }];
+     
+     [self.tableView reloadData];
+     self.scroll.backgroundColor = [UIColor redColor];
+     CGSize oldSize = self.scroll.size;
+     CGSize addTableSize = CGSizeMake(SCREEN_WIDTH, oldSize.height + self.tableView.contentSize.height);
+     self.scroll.size = addTableSize;*/
     // [self.view addSubview:self.scroll];
-
+    
 }
 
 - (UIButton *)commentButton {
@@ -335,7 +339,7 @@
     [self.scroll addSubview:self.avatarImageView];
     
     __weak typeof(self) weakself = self;
-
+    
     [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(weakself.scroll.mas_left).offset(14);
         make.top.equalTo(weakself.scroll.mas_top).offset(12);
@@ -367,7 +371,7 @@
     [super viewDidLoad];
     [self creatHeaderView];
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.tabBarController.tabBar.hidden = YES;
     
@@ -384,8 +388,8 @@
         //        NSLog(@"这是全部数据???%@",jsonStr);
         
         self.newModel = self.model;
-//        NSLog(@"---------------%@",self.newModel);
-//        NSLog(@"%@",responseObject[@"data"]);
+        //        NSLog(@"---------------%@",self.newModel);
+        //        NSLog(@"%@",responseObject[@"data"]);
         
         self.newModel.content = responseObject[@"data"][@"cur"][@"content"];
         [self creatHtmlScroll];
@@ -406,31 +410,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     /*
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        JMStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"status"];
-        
-        if (cell == nil) {
-            //采用了estimatedHeight的话就必须在这里进行cell创建的时候加载,而不能在viewDidLoad里面进行注册,否则方法顺序会出错
-            //estimateHeight就是为了让cell在创建的时候再决定高度
-            
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"JMStatusCell" owner:nil options:nil]lastObject];
-            
-        }
-        cell.commentButton.hidden = NO;
-        cell.likedButton.hidden = NO;
-        cell.collectButton.hidden = NO;
-        cell.isDetail = YES;
-        cell.model = self.newModel;
-        
-        return cell;
-    } else {*/
-        JMReplyTabelViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reply"];
-        if (cell == nil) {
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"JMReplyTabelViewCell" owner:nil options:nil]lastObject];
-        }
-        cell.model = self.dataArray[indexPath.row];
-        //        cell.textLabel.text = @"nimabihoutaijiushigeshabi";
-        return cell;
+     if (indexPath.section == 0 && indexPath.row == 0) {
+     JMStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"status"];
+     
+     if (cell == nil) {
+     //采用了estimatedHeight的话就必须在这里进行cell创建的时候加载,而不能在viewDidLoad里面进行注册,否则方法顺序会出错
+     //estimateHeight就是为了让cell在创建的时候再决定高度
+     
+     cell = [[[NSBundle mainBundle]loadNibNamed:@"JMStatusCell" owner:nil options:nil]lastObject];
+     
+     }
+     cell.commentButton.hidden = NO;
+     cell.likedButton.hidden = NO;
+     cell.collectButton.hidden = NO;
+     cell.isDetail = YES;
+     cell.model = self.newModel;
+     
+     return cell;
+     } else {*/
+    JMReplyTabelViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reply"];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"JMReplyTabelViewCell" owner:nil options:nil]lastObject];
+    }
+    cell.model = self.dataArray[indexPath.row];
+    //        cell.textLabel.text = @"nimabihoutaijiushigeshabi";
+    return cell;
     //}     // Configure the cell...
 }
 
@@ -442,12 +446,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     /*
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        return self.newModel.cellHeight;
-    } else {*/
-        JMReplyModel *model = self.dataArray[indexPath.row];
-        return model.cellHeight;
-   // }
+     if (indexPath.section == 0 && indexPath.row == 0) {
+     return self.newModel.cellHeight;
+     } else {*/
+    JMReplyModel *model = self.dataArray[indexPath.row];
+    return model.cellHeight;
+    // }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -462,9 +466,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     /*if (section == 0) {
-        return 1;
-    } else {*/
-        return self.dataArray.count;
+     return 1;
+     } else {*/
+    return self.dataArray.count;
     //}
 }
 
